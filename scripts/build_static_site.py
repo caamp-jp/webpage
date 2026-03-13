@@ -454,8 +454,8 @@ ABOUT_PAGE_CONTENT = {
         "contact_title": "Any Questions?",
         "contact_body": "We welcome feedback and questions from users, corporate communities and academia. Please feel free to drop in and let us know.",
         "contact_label": "Contact Us",
-        "show_contact_image": False,
-        "mission_media": "image-video",
+        "show_contact_image": True,
+        "mission_media": "video",
         "mission_image": "media/about-mission-en.jpg",
         "mission_image_alt": "Field test scene with AI Suitcase",
         "primary_members": [
@@ -605,7 +605,7 @@ CONTACT_CONTENT = {
         "email": "pmo.caamp.japan@gmail.com",
         "notice": "The original form has been replaced with a direct email contact so the page stays fully static.",
         "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.937293936208!2d139.78263913088836!3d35.678545974390985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889439bb79c1b%3A0x12dc0bcd65c5bec0!2sIBM%20Japan!5e0!3m2!1sen!2sca!4v1677812981221!5m2!1sen!2sca",
-        "layout": "stack",
+        "layout": "split",
         "button_label": "Email Us",
     },
 }
