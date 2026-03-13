@@ -290,188 +290,320 @@ HOME_CONTENT = {
     },
 }
 
-ABOUT_CONTENT = {
-    "jp": {
-        "mission": "一般社団法人 次世代移動支援技術開発コンソーシアム (通称 : AIスーツケース・コンソーシアム) は、視覚障がい者の実社会におけるアクセシビリティ (\"リアルワールド・アクセシビリティ\") と QOL 向上に資する、AI を活用した先進的移動支援技術の研究開発を行っています。",
-        "board_title": "理事会",
-        "board_members": [
-            {
-                "name": "福田 剛志",
-                "role": "代表理事",
-                "org": "日本アイ・ビー・エム株式会社",
-                "image": "media/member-fukuda.jpg",
-            },
-            {
-                "name": "掛川 秀史",
-                "role": "理事",
-                "org": "清水建設株式会社",
-                "image": "media/member-kakegawa.jpg",
-            },
-            {
-                "name": "諏訪 正樹",
-                "role": "理事",
-                "org": "オムロン株式会社",
-                "image": "media/member-suwa.jpg",
-            },
-            {
-                "name": "伊藤 直樹",
-                "role": "監事",
-                "org": "アルプスアルパイン株式会社",
-                "image": "media/member-ito.jpeg",
-            },
-        ],
-        "distinguished_title": "特別会員",
-        "distinguished_members": [
-            {
-                "name": "浅川 智恵子",
-                "role": "特別会員",
-                "org": "カーネギーメロン大学 / IBM Corporation",
-                "image": "media/member-asakawa.jpg",
-                "href": "https://researcher.watson.ibm.com/researcher/view.php?person=us-chiekoa",
-            },
-            {
-                "name": "佐藤 大介",
-                "role": "特別会員",
-                "org": "カーネギーメロン大学",
-                "image": "media/member-sato.png",
-                "href": "https://www.ri.cmu.edu/ri-people/daisuke-sato/",
-            },
-        ],
-        "supporting": [
-            ("慶應義塾大学", None),
-            ("早稲田大学 先進理工学研究科 物理学及応用物理学専攻 森島繁生研究室", None),
-            ("日本盲導犬協会", "https://www.moudouken.net/"),
-            ("エース株式会社", "https://www.ace.jp/"),
-            ("日本科学未来館", "https://www.miraikan.jst.go.jp/"),
-            ("産業技術総合研究所 人間社会拡張研究部門", "https://unit.aist.go.jp/rihsa/"),
-            ("HEROZ株式会社", "https://heroz.co.jp/"),
-        ],
-    },
-    "en": {
-        "mission": "Consortium for Advanced Assistive Mobility Platform (CAAMP, a.k.a. the AI Suitcase Consortium) is working to improve accessibility and quality of life for blind and visually impaired people through real-world deployment of assistive AI technologies.",
-        "board_title": "Board of Directors",
-        "board_members": [
-            {
-                "name": "Takeshi Fukuda",
-                "role": "Representative Director",
-                "org": "IBM Japan, Ltd.",
-                "image": "media/member-fukuda.jpg",
-            },
-            {
-                "name": "Shuji Kakegawa",
-                "role": "Director",
-                "org": "Shimizu Corporation",
-                "image": "media/member-kakegawa.jpg",
-            },
-            {
-                "name": "Masaki Suwa",
-                "role": "Director",
-                "org": "OMRON Corporation",
-                "image": "media/member-suwa.jpg",
-            },
-            {
-                "name": "Naoki Ito",
-                "role": "Auditor",
-                "org": "Alps Alpine Co., Ltd.",
-                "image": "media/member-ito.jpeg",
-            },
-        ],
-        "distinguished_title": "Distinguished Members",
-        "distinguished_members": [
-            {
-                "name": "Chieko Asakawa",
-                "role": "Distinguished Member",
-                "org": "Carnegie Mellon University / IBM Corporation",
-                "image": "media/member-asakawa-en.jpg",
-                "href": "https://researcher.watson.ibm.com/researcher/view.php?person=us-chiekoa",
-            },
-            {
-                "name": "Daisuke Sato",
-                "role": "Distinguished Member",
-                "org": "Carnegie Mellon University",
-                "image": "media/member-sato-en.jpg",
-                "href": "https://www.ri.cmu.edu/ri-people/daisuke-sato/",
-            },
-        ],
-        "supporting": [
-            ("Keio University", None),
-            ("Waseda University Morishima Lab.", None),
-            ("Japan Guide Dog Association", "https://www.moudouken.net/"),
-            ("ACE Co., Ltd.", "https://www.ace.jp/"),
-            ("The National Museum of Emerging Science and Innovation", "https://www.miraikan.jst.go.jp/"),
-            ("Santen Pharmaceutical Co., Ltd.", "https://www.santen.co.jp/ja/"),
-            (
-                "Research Institute on Human and Societal Augmentation",
-                "https://unit.aist.go.jp/rihsa/en/",
-            ),
-        ],
-    },
-}
-
-ABOUT_PAGE_CONTENT = {
+ABOUT_PAGE_DATA = {
     "jp": {
         "page_title": "About",
-        "team_title": "Our team",
-        "primary_title": "正会員",
-        "associate_title": "準会員",
-        "supporting_title": "賛助会員",
-        "document_title": "定款",
-        "document_label": "定款を開く",
-        "technology_eyebrow": "each member has a role",
-        "technology_title": "Our technology",
-        "technology_label": "Learn More",
-        "contact_title": "Any Questions?",
-        "contact_body": "AIスーツケース・コンソーシアムでは、実験に参加していただけるユーザーや活用可能なデータを提供していただける企業からの連絡をお待ちしています。その他ご質問、取材等もお気軽にお問い合わせください。",
-        "contact_label": "Contact Us",
-        "show_contact_image": True,
-        "mission_media": "video",
-        "primary_members": [
-            ("アルプスアルパイン株式会社", "media/about-primary-alps-jp.png", "https://www.alpsalpine.com/j/"),
-            ("日本アイ・ビー・エム株式会社", "media/about-primary-ibm-jp.png", "https://www.ibm.com/jp-ja"),
-            ("オムロン株式会社", "media/about-primary-omron-jp.png", "https://www.omron.co.jp/"),
-            ("清水建設株式会社", "media/about-primary-shimizu-jp.png", "https://www.shimz.co.jp/"),
-        ],
-        "technology_cards": [
-            ("触覚インターフェイス", "media/tech-tactile.png", "media/about-tech-sponsor-alps-jp.png", "https://www.alpsalpine.com/j/"),
-            ("画像認識", "media/tech-vision.png", "media/about-tech-sponsor-omron-jp.png", "https://www.omron.co.jp/"),
-            ("対話AI・行動/環境認識・クラウド技術", "media/about-tech-dialogue.png", "media/about-tech-sponsor-ibm-jp.png", "https://www.ibm.com/jp-ja/about"),
-            ("ロボット技術・測位/ナビゲーション", "media/tech-navigation.png", "media/about-tech-sponsor-shimizu-jp.png", "https://www.shimz.co.jp/"),
-            ("モビリティサービス", "media/tech-mobility.png", None, None),
-            ("視覚障がい者支援技術", "media/tech-accessibility.png", "media/about-tech-sponsor-cmu.png", "https://www.cmu.edu/"),
-        ],
+        "mission": {
+            "body": "一般社団法人 次世代移動支援技術開発コンソーシアム (通称 : AIスーツケース・コンソーシアム) は、視覚障がい者の実社会におけるアクセシビリティ (\"リアルワールド・アクセシビリティ\") と QOL 向上に資する、AI を活用した先進的移動支援技術の研究開発を行っています。",
+            "media": {
+                "type": "video",
+            },
+        },
+        "team": {
+            "title": "Our team",
+            "board": {
+                "title": "理事会",
+                "members": [
+                    {
+                        "name": "福田 剛志",
+                        "role": "代表理事",
+                        "org": "日本アイ・ビー・エム株式会社",
+                        "image": "media/member-fukuda.jpg",
+                    },
+                    {
+                        "name": "掛川 秀史",
+                        "role": "理事",
+                        "org": "清水建設株式会社",
+                        "image": "media/member-kakegawa.jpg",
+                    },
+                    {
+                        "name": "諏訪 正樹",
+                        "role": "理事",
+                        "org": "オムロン株式会社",
+                        "image": "media/member-suwa.jpg",
+                    },
+                    {
+                        "name": "伊藤 直樹",
+                        "role": "監事",
+                        "org": "アルプスアルパイン株式会社",
+                        "image": "media/member-ito.jpeg",
+                    },
+                ],
+            },
+            "primary": {
+                "title": "正会員",
+                "members": [
+                    {
+                        "name": "アルプスアルパイン株式会社",
+                        "image": "media/about-primary-alps-jp.png",
+                        "href": "https://www.alpsalpine.com/j/",
+                    },
+                    {
+                        "name": "日本アイ・ビー・エム株式会社",
+                        "image": "media/about-primary-ibm-jp.png",
+                        "href": "https://www.ibm.com/jp-ja",
+                    },
+                    {
+                        "name": "オムロン株式会社",
+                        "image": "media/about-primary-omron-jp.png",
+                        "href": "https://www.omron.co.jp/",
+                    },
+                    {
+                        "name": "清水建設株式会社",
+                        "image": "media/about-primary-shimizu-jp.png",
+                        "href": "https://www.shimz.co.jp/",
+                    },
+                ],
+            },
+            "associate": {
+                "title": "準会員",
+            },
+            "distinguished": {
+                "title": "特別会員",
+                "members": [
+                    {
+                        "name": "浅川 智恵子",
+                        "role": "特別会員",
+                        "org": "カーネギーメロン大学 / IBM Corporation",
+                        "image": "media/member-asakawa.jpg",
+                        "href": "https://researcher.watson.ibm.com/researcher/view.php?person=us-chiekoa",
+                    },
+                    {
+                        "name": "佐藤 大介",
+                        "role": "特別会員",
+                        "org": "カーネギーメロン大学",
+                        "image": "media/member-sato.png",
+                        "href": "https://www.ri.cmu.edu/ri-people/daisuke-sato/",
+                    },
+                ],
+            },
+            "supporting": {
+                "title": "賛助会員",
+                "members": [
+                    {"name": "慶應義塾大学", "href": None},
+                    {"name": "早稲田大学 先進理工学研究科 物理学及応用物理学専攻 森島繁生研究室", "href": None},
+                    {"name": "日本盲導犬協会", "href": "https://www.moudouken.net/"},
+                    {"name": "エース株式会社", "href": "https://www.ace.jp/"},
+                    {"name": "日本科学未来館", "href": "https://www.miraikan.jst.go.jp/"},
+                    {"name": "産業技術総合研究所 人間社会拡張研究部門", "href": "https://unit.aist.go.jp/rihsa/"},
+                    {"name": "HEROZ株式会社", "href": "https://heroz.co.jp/"},
+                ],
+            },
+        },
+        "document": {
+            "title": "定款",
+            "label": "定款を開く",
+        },
+        "technology": {
+            "eyebrow": "each member has a role",
+            "title": "Our technology",
+            "label": "Learn More",
+            "cards": [
+                {
+                    "title": "触覚インターフェイス",
+                    "image": "media/tech-tactile.png",
+                    "sponsor_image": "media/about-tech-sponsor-alps-jp.png",
+                    "sponsor_href": "https://www.alpsalpine.com/j/",
+                },
+                {
+                    "title": "画像認識",
+                    "image": "media/tech-vision.png",
+                    "sponsor_image": "media/about-tech-sponsor-omron-jp.png",
+                    "sponsor_href": "https://www.omron.co.jp/",
+                },
+                {
+                    "title": "対話AI・行動/環境認識・クラウド技術",
+                    "image": "media/about-tech-dialogue.png",
+                    "sponsor_image": "media/about-tech-sponsor-ibm-jp.png",
+                    "sponsor_href": "https://www.ibm.com/jp-ja/about",
+                },
+                {
+                    "title": "ロボット技術・測位/ナビゲーション",
+                    "image": "media/tech-navigation.png",
+                    "sponsor_image": "media/about-tech-sponsor-shimizu-jp.png",
+                    "sponsor_href": "https://www.shimz.co.jp/",
+                },
+                {
+                    "title": "モビリティサービス",
+                    "image": "media/tech-mobility.png",
+                    "sponsor_image": None,
+                    "sponsor_href": None,
+                },
+                {
+                    "title": "視覚障がい者支援技術",
+                    "image": "media/tech-accessibility.png",
+                    "sponsor_image": "media/about-tech-sponsor-cmu.png",
+                    "sponsor_href": "https://www.cmu.edu/",
+                },
+            ],
+        },
+        "contact_cta": {
+            "title": "Any Questions?",
+            "body": "AIスーツケース・コンソーシアムでは、実験に参加していただけるユーザーや活用可能なデータを提供していただける企業からの連絡をお待ちしています。その他ご質問、取材等もお気軽にお問い合わせください。",
+            "label": "Contact Us",
+            "show_image": True,
+        },
     },
     "en": {
         "page_title": "About",
-        "team_title": "Our Team",
-        "primary_title": "Primary Members",
-        "associate_title": "Associate Members",
-        "supporting_title": "Supporting Members",
-        "document_title": "Article of Incorporation",
-        "document_label": "Open",
-        "technology_eyebrow": "each member has a role",
-        "technology_title": "Our Technology",
-        "technology_label": "Learn More",
-        "contact_title": "Any Questions?",
-        "contact_body": "We welcome feedback and questions from users, corporate communities and academia. Please feel free to drop in and let us know.",
-        "contact_label": "Contact Us",
-        "show_contact_image": True,
-        "mission_media": "video",
-        "mission_image": "media/about-mission-en.jpg",
-        "mission_image_alt": "Field test scene with AI Suitcase",
-        "primary_members": [
-            ("IBM Japan, Ltd.", "media/about-primary-ibm-en.png", "https://www.ibm.com/jp-ja"),
-            ("Shimizu Corporation", "media/about-primary-shimizu-en.png", "https://www.shimz.co.jp/"),
-            ("OMRON Corporation", "media/about-primary-omron-en.png", "https://www.omron.co.jp/"),
-            ("Alps Alpine Co., Ltd.", "media/about-primary-alps-en.png", "https://www.alpsalpine.com/j/"),
-        ],
-        "technology_cards": [
-            ("Tactile Interface", "media/tech-tactile.png", "media/about-tech-sponsor-alps-en.png", "https://www.alpsalpine.com/j/"),
-            ("Visual Recognition", "media/tech-vision.png", "media/about-tech-sponsor-omron-en.png", "https://www.omron.co.jp/"),
-            ("Interactive AI, Behavior and Environment Recognition, Cloud", "media/about-tech-dialogue.png", "media/about-tech-sponsor-ibm-en.png", "https://www.ibm.com/jp-ja/about"),
-            ("Robotics, Localization and Navigation", "media/tech-navigation.png", "media/about-tech-sponsor-shimizu-en.png", "https://www.shimz.co.jp/"),
-            ("Mobility Service", "media/tech-mobility.png", None, None),
-            ("Assistive Technologies for Visual Impairment", "media/tech-accessibility.png", "media/about-tech-sponsor-cmu.png", "https://www.cmu.edu/"),
-        ],
+        "mission": {
+            "body": "Consortium for Advanced Assistive Mobility Platform (CAAMP, a.k.a. the AI Suitcase Consortium) is working to improve accessibility and quality of life for blind and visually impaired people through real-world deployment of assistive AI technologies.",
+            "media": {
+                "type": "video",
+                "image": "media/about-mission-en.jpg",
+                "image_alt": "Field test scene with AI Suitcase",
+            },
+        },
+        "team": {
+            "title": "Our Team",
+            "board": {
+                "title": "Board of Directors",
+                "members": [
+                    {
+                        "name": "Takeshi Fukuda",
+                        "role": "Representative Director",
+                        "org": "IBM Japan, Ltd.",
+                        "image": "media/member-fukuda.jpg",
+                    },
+                    {
+                        "name": "Shuji Kakegawa",
+                        "role": "Director",
+                        "org": "Shimizu Corporation",
+                        "image": "media/member-kakegawa.jpg",
+                    },
+                    {
+                        "name": "Masaki Suwa",
+                        "role": "Director",
+                        "org": "OMRON Corporation",
+                        "image": "media/member-suwa.jpg",
+                    },
+                    {
+                        "name": "Naoki Ito",
+                        "role": "Auditor",
+                        "org": "Alps Alpine Co., Ltd.",
+                        "image": "media/member-ito.jpeg",
+                    },
+                ],
+            },
+            "primary": {
+                "title": "Primary Members",
+                "members": [
+                    {
+                        "name": "IBM Japan, Ltd.",
+                        "image": "media/about-primary-ibm-en.png",
+                        "href": "https://www.ibm.com/jp-ja",
+                    },
+                    {
+                        "name": "Shimizu Corporation",
+                        "image": "media/about-primary-shimizu-en.png",
+                        "href": "https://www.shimz.co.jp/",
+                    },
+                    {
+                        "name": "OMRON Corporation",
+                        "image": "media/about-primary-omron-en.png",
+                        "href": "https://www.omron.co.jp/",
+                    },
+                    {
+                        "name": "Alps Alpine Co., Ltd.",
+                        "image": "media/about-primary-alps-en.png",
+                        "href": "https://www.alpsalpine.com/j/",
+                    },
+                ],
+            },
+            "associate": {
+                "title": "Associate Members",
+            },
+            "distinguished": {
+                "title": "Distinguished Members",
+                "members": [
+                    {
+                        "name": "Chieko Asakawa",
+                        "role": "Distinguished Member",
+                        "org": "Carnegie Mellon University / IBM Corporation",
+                        "image": "media/member-asakawa-en.jpg",
+                        "href": "https://researcher.watson.ibm.com/researcher/view.php?person=us-chiekoa",
+                    },
+                    {
+                        "name": "Daisuke Sato",
+                        "role": "Distinguished Member",
+                        "org": "Carnegie Mellon University",
+                        "image": "media/member-sato-en.jpg",
+                        "href": "https://www.ri.cmu.edu/ri-people/daisuke-sato/",
+                    },
+                ],
+            },
+            "supporting": {
+                "title": "Supporting Members",
+                "members": [
+                    {"name": "Keio University", "href": None},
+                    {"name": "Waseda University Morishima Lab.", "href": None},
+                    {"name": "Japan Guide Dog Association", "href": "https://www.moudouken.net/"},
+                    {"name": "ACE Co., Ltd.", "href": "https://www.ace.jp/"},
+                    {
+                        "name": "The National Museum of Emerging Science and Innovation",
+                        "href": "https://www.miraikan.jst.go.jp/",
+                    },
+                    {"name": "Santen Pharmaceutical Co., Ltd.", "href": "https://www.santen.co.jp/ja/"},
+                    {
+                        "name": "Research Institute on Human and Societal Augmentation",
+                        "href": "https://unit.aist.go.jp/rihsa/en/",
+                    },
+                ],
+            },
+        },
+        "document": {
+            "title": "Article of Incorporation",
+            "label": "Open",
+        },
+        "technology": {
+            "eyebrow": "each member has a role",
+            "title": "Our Technology",
+            "label": "Learn More",
+            "cards": [
+                {
+                    "title": "Tactile Interface",
+                    "image": "media/tech-tactile.png",
+                    "sponsor_image": "media/about-tech-sponsor-alps-en.png",
+                    "sponsor_href": "https://www.alpsalpine.com/j/",
+                },
+                {
+                    "title": "Visual Recognition",
+                    "image": "media/tech-vision.png",
+                    "sponsor_image": "media/about-tech-sponsor-omron-en.png",
+                    "sponsor_href": "https://www.omron.co.jp/",
+                },
+                {
+                    "title": "Interactive AI, Behavior and Environment Recognition, Cloud",
+                    "image": "media/about-tech-dialogue.png",
+                    "sponsor_image": "media/about-tech-sponsor-ibm-en.png",
+                    "sponsor_href": "https://www.ibm.com/jp-ja/about",
+                },
+                {
+                    "title": "Robotics, Localization and Navigation",
+                    "image": "media/tech-navigation.png",
+                    "sponsor_image": "media/about-tech-sponsor-shimizu-en.png",
+                    "sponsor_href": "https://www.shimz.co.jp/",
+                },
+                {
+                    "title": "Mobility Service",
+                    "image": "media/tech-mobility.png",
+                    "sponsor_image": None,
+                    "sponsor_href": None,
+                },
+                {
+                    "title": "Assistive Technologies for Visual Impairment",
+                    "image": "media/tech-accessibility.png",
+                    "sponsor_image": "media/about-tech-sponsor-cmu.png",
+                    "sponsor_href": "https://www.cmu.edu/",
+                },
+            ],
+        },
+        "contact_cta": {
+            "title": "Any Questions?",
+            "body": "We welcome feedback and questions from users, corporate communities and academia. Please feel free to drop in and let us know.",
+            "label": "Contact Us",
+            "show_image": True,
+        },
     },
 }
 
@@ -1061,30 +1193,32 @@ def render_about_rule(title: str) -> str:
     )
 
 
-def render_logo_panels(current_dir: str, logos: list[tuple[str, str, str]]) -> str:
+def render_logo_panels(current_dir: str, logos: list[dict[str, str]]) -> str:
     items = []
-    for alt, image, href in logos:
+    for logo in logos:
         items.append(
             '<a class="about-logo-panel surface reveal"'
-            f' href="{html.escape(href)}" target="_blank" rel="noreferrer">'
-            f'<img src="{asset_href(current_dir, image)}" alt="{html.escape(alt)}" loading="lazy"></a>'
+            f' href="{html.escape(logo["href"])}" target="_blank" rel="noreferrer">'
+            f'<img src="{asset_href(current_dir, logo["image"])}" alt="{html.escape(logo["name"])}" loading="lazy"></a>'
         )
     return '<div class="about-logo-grid">' + "".join(items) + "</div>"
 
 
-def render_about_supporting_list(items: list[tuple[str, str | None]]) -> str:
+def render_about_supporting_list(items: list[dict[str, str | None]]) -> str:
     parts = ['<ul class="about-support-list surface reveal">']
-    for label, href in items:
-        content = external_link(href, label) if href else html.escape(label)
+    for item in items:
+        content = external_link(item["href"], item["name"]) if item["href"] else html.escape(item["name"])
         parts.append(f"<li>{content}</li>")
     parts.append("</ul>")
     return "".join(parts)
 
 
-def render_about_tech_cards(locale: str, current_dir: str) -> str:
+def render_about_tech_cards(cards_data: list[dict[str, str | None]], current_dir: str) -> str:
     cards = []
-    for title, image, sponsor, sponsor_href in ABOUT_PAGE_CONTENT[locale]["technology_cards"]:
+    for card in cards_data:
         sponsor_html = ""
+        sponsor = card["sponsor_image"]
+        sponsor_href = card["sponsor_href"]
         if sponsor and sponsor_href:
             sponsor_html = (
                 '<a class="about-tech-sponsor"'
@@ -1093,8 +1227,8 @@ def render_about_tech_cards(locale: str, current_dir: str) -> str:
             )
         cards.append(
             '<article class="about-tech-card surface reveal">'
-            f'<img class="about-tech-icon" src="{asset_href(current_dir, image)}" alt="{html.escape(title)}" loading="lazy">'
-            f"<h3>{html.escape(title)}</h3>"
+            f'<img class="about-tech-icon" src="{asset_href(current_dir, card["image"])}" alt="{html.escape(card["title"])}" loading="lazy">'
+            f"<h3>{html.escape(card['title'])}</h3>"
             f"{sponsor_html}"
             "</article>"
         )
@@ -1102,27 +1236,32 @@ def render_about_tech_cards(locale: str, current_dir: str) -> str:
 
 
 def render_about(locale: str, current_dir: str) -> str:
-    content = ABOUT_CONTENT[locale]
-    page = ABOUT_PAGE_CONTENT[locale]
+    page = ABOUT_PAGE_DATA[locale]
+    mission = page["mission"]
+    mission_media = mission["media"]
+    team = page["team"]
+    document = page["document"]
+    technology = page["technology"]
+    contact_cta = page["contact_cta"]
     mission_title = SITE_SETTINGS["about_mission_title"][locale]
     article_href = asset_href(current_dir, "docs/article-of-incorporation.pdf")
     technology_href = route_href(current_dir, route_dir(locale, "technology"))
     contact_href = route_href(current_dir, route_dir(locale, "contact"))
     video_src = asset_href(current_dir, "media/ai-suitcase.mp4")
     video_poster = asset_href(current_dir, "media/hero-home.jpg")
-    contact_section_class = "section split-section about-contact-grid reveal" if page["show_contact_image"] else "section reveal"
+    contact_section_class = "section split-section about-contact-grid reveal" if contact_cta["show_image"] else "section reveal"
     mission_parts = [
         '<section class="section about-page-title reveal">',
         f'<h1>{html.escape(page["page_title"])}</h1>',
         "</section>",
     ]
-    if page["mission_media"] == "video":
+    if mission_media["type"] == "video":
         mission_parts.extend(
             [
                 '<section class="section about-mission-grid reveal">',
                 '<div class="surface about-mission-copy">',
                 f'<h2>{html.escape(mission_title)}</h2>',
-                f'<p>{html.escape(content["mission"])}</p>',
+                f'<p>{html.escape(mission["body"])}</p>',
                 "</div>",
                 '<div class="video-shell surface about-inline-video">',
                 f'<video autoplay muted loop playsinline preload="metadata" poster="{video_poster}">',
@@ -1136,10 +1275,10 @@ def render_about(locale: str, current_dir: str) -> str:
                 '<section class="section reveal">',
                 '<div class="surface about-mission-copy about-mission-copy-single">',
                 f'<h2>{html.escape(mission_title)}</h2>',
-                f'<p>{html.escape(content["mission"])}</p>',
+                f'<p>{html.escape(mission["body"])}</p>',
                 "</div></section>",
                 '<section class="section about-media-grid reveal">',
-                f'<div class="split-media surface"><img src="{asset_href(current_dir, page["mission_image"])}" alt="{html.escape(page["mission_image_alt"])}" loading="lazy"></div>',
+                f'<div class="split-media surface"><img src="{asset_href(current_dir, mission_media["image"])}" alt="{html.escape(mission_media["image_alt"])}" loading="lazy"></div>',
                 '<div class="video-shell surface about-inline-video">',
                 f'<video autoplay muted loop playsinline preload="metadata" poster="{video_poster}">',
                 f'<source src="{video_src}" type="video/mp4">',
@@ -1147,12 +1286,12 @@ def render_about(locale: str, current_dir: str) -> str:
             ]
         )
 
-    team_members = render_member_cards(content["board_members"], current_dir, locale, show_role=True)
+    team_members = render_member_cards(team["board"]["members"], current_dir, locale, show_role=True)
     distinguished_members = render_member_cards(
-        content["distinguished_members"], current_dir, locale, show_role=False, compact=True
+        team["distinguished"]["members"], current_dir, locale, show_role=False, compact=True
     )
     contact_media = ""
-    if page["show_contact_image"]:
+    if contact_cta["show_image"]:
         contact_media = (
             '<div class="split-media surface">'
             f'<img src="{asset_href(current_dir, "media/home-contact.jpg")}" alt="Contact and field activity" loading="lazy"></div>'
@@ -1164,50 +1303,50 @@ def render_about(locale: str, current_dir: str) -> str:
 
         <section class="section reveal">
           <div class="section-heading">
-            <h2>{html.escape(page["team_title"])}</h2>
+            <h2>{html.escape(team["title"])}</h2>
           </div>
-          {render_about_rule(content["board_title"])}
+          {render_about_rule(team["board"]["title"])}
           <div class="about-member-grid about-member-grid-board">
             {team_members}
           </div>
-          {render_about_rule(page["primary_title"])}
-          {render_logo_panels(current_dir, page["primary_members"])}
-          {render_about_rule(page["associate_title"])}
+          {render_about_rule(team["primary"]["title"])}
+          {render_logo_panels(current_dir, team["primary"]["members"])}
+          {render_about_rule(team["associate"]["title"])}
           <div class="about-empty reveal"></div>
-          {render_about_rule(content["distinguished_title"])}
+          {render_about_rule(team["distinguished"]["title"])}
           <div class="about-member-grid about-member-grid-distinguished">
             {distinguished_members}
           </div>
-          {render_about_rule(page["supporting_title"])}
-          {render_about_supporting_list(content["supporting"])}
+          {render_about_rule(team["supporting"]["title"])}
+          {render_about_supporting_list(team["supporting"]["members"])}
         </section>
 
         <section class="section reveal">
           <div class="surface about-document">
-            <h2>{html.escape(page["document_title"])}</h2>
-            <p>{local_link(article_href, page["document_label"], "button")}</p>
+            <h2>{html.escape(document["title"])}</h2>
+            <p>{local_link(article_href, document["label"], "button")}</p>
           </div>
         </section>
 
         <section class="section reveal">
           <div class="about-tech-head">
             <div class="section-heading">
-              <p class="eyebrow">{html.escape(page["technology_eyebrow"])}</p>
-              <h2>{html.escape(page["technology_title"])}</h2>
+              <p class="eyebrow">{html.escape(technology["eyebrow"])}</p>
+              <h2>{html.escape(technology["title"])}</h2>
             </div>
             <div class="button-row">
-              {local_link(technology_href, page["technology_label"], "button")}
+              {local_link(technology_href, technology["label"], "button")}
             </div>
           </div>
-          {render_about_tech_cards(locale, current_dir)}
+          {render_about_tech_cards(technology["cards"], current_dir)}
         </section>
 
         <section class="{contact_section_class}">
           <div class="surface about-contact-copy">
-            <h2>{html.escape(page["contact_title"])}</h2>
-            <p>{html.escape(page["contact_body"])}</p>
+            <h2>{html.escape(contact_cta["title"])}</h2>
+            <p>{html.escape(contact_cta["body"])}</p>
             <div class="button-row">
-              {local_link(contact_href, page["contact_label"], "button")}
+              {local_link(contact_href, contact_cta["label"], "button")}
             </div>
           </div>
           {contact_media}
@@ -1513,8 +1652,7 @@ CONTENT_GLOBAL_MAP = {
     "nav_labels": "NAV_LABELS",
     "page_meta": "PAGE_META",
     "home_content": "HOME_CONTENT",
-    "about_content": "ABOUT_CONTENT",
-    "about_page_content": "ABOUT_PAGE_CONTENT",
+    "about_page_data": "ABOUT_PAGE_DATA",
     "tech_content": "TECH_CONTENT",
     "related_content": "RELATED_CONTENT",
     "news_page_content": "NEWS_PAGE_CONTENT",

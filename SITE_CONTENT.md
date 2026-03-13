@@ -234,318 +234,356 @@
       "contact_image_alt": "Demonstration scene with AI Suitcase users"
     }
   },
-  "about_content": {
-    "jp": {
-      "mission": "一般社団法人 次世代移動支援技術開発コンソーシアム (通称 : AIスーツケース・コンソーシアム) は、視覚障がい者の実社会におけるアクセシビリティ (\"リアルワールド・アクセシビリティ\") と QOL 向上に資する、AI を活用した先進的移動支援技術の研究開発を行っています。",
-      "board_title": "理事会",
-      "board_members": [
-        {
-          "name": "福田 剛志",
-          "role": "代表理事",
-          "org": "日本アイ・ビー・エム株式会社",
-          "image": "media/member-fukuda.jpg"
-        },
-        {
-          "name": "掛川 秀史",
-          "role": "理事",
-          "org": "清水建設株式会社",
-          "image": "media/member-kakegawa.jpg"
-        },
-        {
-          "name": "諏訪 正樹",
-          "role": "理事",
-          "org": "オムロン株式会社",
-          "image": "media/member-suwa.jpg"
-        },
-        {
-          "name": "伊藤 直樹",
-          "role": "監事",
-          "org": "アルプスアルパイン株式会社",
-          "image": "media/member-ito.jpeg"
-        }
-      ],
-      "distinguished_title": "特別会員",
-      "distinguished_members": [
-        {
-          "name": "浅川 智恵子",
-          "role": "特別会員",
-          "org": "カーネギーメロン大学 / IBM Corporation",
-          "image": "media/member-asakawa.jpg",
-          "href": "https://researcher.watson.ibm.com/researcher/view.php?person=us-chiekoa"
-        },
-        {
-          "name": "佐藤 大介",
-          "role": "特別会員",
-          "org": "カーネギーメロン大学",
-          "image": "media/member-sato.png",
-          "href": "https://www.ri.cmu.edu/ri-people/daisuke-sato/"
-        }
-      ],
-      "supporting": [
-        [
-          "慶應義塾大学",
-          null
-        ],
-        [
-          "早稲田大学 先進理工学研究科 物理学及応用物理学専攻 森島繁生研究室",
-          null
-        ],
-        [
-          "日本盲導犬協会",
-          "https://www.moudouken.net/"
-        ],
-        [
-          "エース株式会社",
-          "https://www.ace.jp/"
-        ],
-        [
-          "日本科学未来館",
-          "https://www.miraikan.jst.go.jp/"
-        ],
-        [
-          "産業技術総合研究所 人間社会拡張研究部門",
-          "https://unit.aist.go.jp/rihsa/"
-        ],
-        [
-          "HEROZ株式会社",
-          "https://heroz.co.jp/"
-        ]
-      ]
-    },
-    "en": {
-      "mission": "Consortium for Advanced Assistive Mobility Platform (CAAMP, a.k.a. the AI Suitcase Consortium) is working to improve accessibility and quality of life for blind and visually impaired people through real-world deployment of assistive AI technologies.",
-      "board_title": "Board of Directors",
-      "board_members": [
-        {
-          "name": "Takeshi Fukuda",
-          "role": "Representative Director",
-          "org": "IBM Japan, Ltd.",
-          "image": "media/member-fukuda.jpg"
-        },
-        {
-          "name": "Shuji Kakegawa",
-          "role": "Director",
-          "org": "Shimizu Corporation",
-          "image": "media/member-kakegawa.jpg"
-        },
-        {
-          "name": "Masaki Suwa",
-          "role": "Director",
-          "org": "OMRON Corporation",
-          "image": "media/member-suwa.jpg"
-        },
-        {
-          "name": "Naoki Ito",
-          "role": "Auditor",
-          "org": "Alps Alpine Co., Ltd.",
-          "image": "media/member-ito.jpeg"
-        }
-      ],
-      "distinguished_title": "Distinguished Members",
-      "distinguished_members": [
-        {
-          "name": "Chieko Asakawa",
-          "role": "Distinguished Member",
-          "org": "Carnegie Mellon University / IBM Corporation",
-          "image": "media/member-asakawa-en.jpg",
-          "href": "https://researcher.watson.ibm.com/researcher/view.php?person=us-chiekoa"
-        },
-        {
-          "name": "Daisuke Sato",
-          "role": "Distinguished Member",
-          "org": "Carnegie Mellon University",
-          "image": "media/member-sato-en.jpg",
-          "href": "https://www.ri.cmu.edu/ri-people/daisuke-sato/"
-        }
-      ],
-      "supporting": [
-        [
-          "Keio University",
-          null
-        ],
-        [
-          "Waseda University Morishima Lab.",
-          null
-        ],
-        [
-          "Japan Guide Dog Association",
-          "https://www.moudouken.net/"
-        ],
-        [
-          "ACE Co., Ltd.",
-          "https://www.ace.jp/"
-        ],
-        [
-          "The National Museum of Emerging Science and Innovation",
-          "https://www.miraikan.jst.go.jp/"
-        ],
-        [
-          "Santen Pharmaceutical Co., Ltd.",
-          "https://www.santen.co.jp/ja/"
-        ],
-        [
-          "Research Institute on Human and Societal Augmentation",
-          "https://unit.aist.go.jp/rihsa/en/"
-        ]
-      ]
-    }
-  },
-  "about_page_content": {
+  "about_page_data": {
     "jp": {
       "page_title": "About",
-      "team_title": "Our team",
-      "primary_title": "正会員",
-      "associate_title": "準会員",
-      "supporting_title": "賛助会員",
-      "document_title": "定款",
-      "document_label": "定款を開く",
-      "technology_eyebrow": "each member has a role",
-      "technology_title": "Our technology",
-      "technology_label": "Learn More",
-      "contact_title": "Any Questions?",
-      "contact_body": "AIスーツケース・コンソーシアムでは、実験に参加していただけるユーザーや活用可能なデータを提供していただける企業からの連絡をお待ちしています。その他ご質問、取材等もお気軽にお問い合わせください。",
-      "contact_label": "Contact Us",
-      "show_contact_image": true,
-      "mission_media": "video",
-      "primary_members": [
-        [
-          "アルプスアルパイン株式会社",
-          "media/about-primary-alps-jp.png",
-          "https://www.alpsalpine.com/j/"
-        ],
-        [
-          "日本アイ・ビー・エム株式会社",
-          "media/about-primary-ibm-jp.png",
-          "https://www.ibm.com/jp-ja"
-        ],
-        [
-          "オムロン株式会社",
-          "media/about-primary-omron-jp.png",
-          "https://www.omron.co.jp/"
-        ],
-        [
-          "清水建設株式会社",
-          "media/about-primary-shimizu-jp.png",
-          "https://www.shimz.co.jp/"
+      "mission": {
+        "body": "一般社団法人 次世代移動支援技術開発コンソーシアム (通称 : AIスーツケース・コンソーシアム) は、視覚障がい者の実社会におけるアクセシビリティ (\"リアルワールド・アクセシビリティ\") と QOL 向上に資する、AI を活用した先進的移動支援技術の研究開発を行っています。",
+        "media": {
+          "type": "video"
+        }
+      },
+      "team": {
+        "title": "Our team",
+        "board": {
+          "title": "理事会",
+          "members": [
+            {
+              "name": "福田 剛志",
+              "role": "代表理事",
+              "org": "日本アイ・ビー・エム株式会社",
+              "image": "media/member-fukuda.jpg"
+            },
+            {
+              "name": "掛川 秀史",
+              "role": "理事",
+              "org": "清水建設株式会社",
+              "image": "media/member-kakegawa.jpg"
+            },
+            {
+              "name": "諏訪 正樹",
+              "role": "理事",
+              "org": "オムロン株式会社",
+              "image": "media/member-suwa.jpg"
+            },
+            {
+              "name": "伊藤 直樹",
+              "role": "監事",
+              "org": "アルプスアルパイン株式会社",
+              "image": "media/member-ito.jpeg"
+            }
+          ]
+        },
+        "primary": {
+          "title": "正会員",
+          "members": [
+            {
+              "name": "アルプスアルパイン株式会社",
+              "image": "media/about-primary-alps-jp.png",
+              "href": "https://www.alpsalpine.com/j/"
+            },
+            {
+              "name": "日本アイ・ビー・エム株式会社",
+              "image": "media/about-primary-ibm-jp.png",
+              "href": "https://www.ibm.com/jp-ja"
+            },
+            {
+              "name": "オムロン株式会社",
+              "image": "media/about-primary-omron-jp.png",
+              "href": "https://www.omron.co.jp/"
+            },
+            {
+              "name": "清水建設株式会社",
+              "image": "media/about-primary-shimizu-jp.png",
+              "href": "https://www.shimz.co.jp/"
+            }
+          ]
+        },
+        "associate": {
+          "title": "準会員"
+        },
+        "distinguished": {
+          "title": "特別会員",
+          "members": [
+            {
+              "name": "浅川 智恵子",
+              "role": "特別会員",
+              "org": "カーネギーメロン大学 / IBM Corporation",
+              "image": "media/member-asakawa.jpg",
+              "href": "https://researcher.watson.ibm.com/researcher/view.php?person=us-chiekoa"
+            },
+            {
+              "name": "佐藤 大介",
+              "role": "特別会員",
+              "org": "カーネギーメロン大学",
+              "image": "media/member-sato.png",
+              "href": "https://www.ri.cmu.edu/ri-people/daisuke-sato/"
+            }
+          ]
+        },
+        "supporting": {
+          "title": "賛助会員",
+          "members": [
+            {
+              "name": "慶應義塾大学",
+              "href": null
+            },
+            {
+              "name": "早稲田大学 先進理工学研究科 物理学及応用物理学専攻 森島繁生研究室",
+              "href": null
+            },
+            {
+              "name": "日本盲導犬協会",
+              "href": "https://www.moudouken.net/"
+            },
+            {
+              "name": "エース株式会社",
+              "href": "https://www.ace.jp/"
+            },
+            {
+              "name": "日本科学未来館",
+              "href": "https://www.miraikan.jst.go.jp/"
+            },
+            {
+              "name": "産業技術総合研究所 人間社会拡張研究部門",
+              "href": "https://unit.aist.go.jp/rihsa/"
+            },
+            {
+              "name": "HEROZ株式会社",
+              "href": "https://heroz.co.jp/"
+            }
+          ]
+        }
+      },
+      "document": {
+        "title": "定款",
+        "label": "定款を開く"
+      },
+      "technology": {
+        "eyebrow": "each member has a role",
+        "title": "Our technology",
+        "label": "Learn More",
+        "cards": [
+          {
+            "title": "触覚インターフェイス",
+            "image": "media/tech-tactile.png",
+            "sponsor_image": "media/about-tech-sponsor-alps-jp.png",
+            "sponsor_href": "https://www.alpsalpine.com/j/"
+          },
+          {
+            "title": "画像認識",
+            "image": "media/tech-vision.png",
+            "sponsor_image": "media/about-tech-sponsor-omron-jp.png",
+            "sponsor_href": "https://www.omron.co.jp/"
+          },
+          {
+            "title": "対話AI・行動/環境認識・クラウド技術",
+            "image": "media/about-tech-dialogue.png",
+            "sponsor_image": "media/about-tech-sponsor-ibm-jp.png",
+            "sponsor_href": "https://www.ibm.com/jp-ja/about"
+          },
+          {
+            "title": "ロボット技術・測位/ナビゲーション",
+            "image": "media/tech-navigation.png",
+            "sponsor_image": "media/about-tech-sponsor-shimizu-jp.png",
+            "sponsor_href": "https://www.shimz.co.jp/"
+          },
+          {
+            "title": "モビリティサービス",
+            "image": "media/tech-mobility.png",
+            "sponsor_image": null,
+            "sponsor_href": null
+          },
+          {
+            "title": "視覚障がい者支援技術",
+            "image": "media/tech-accessibility.png",
+            "sponsor_image": "media/about-tech-sponsor-cmu.png",
+            "sponsor_href": "https://www.cmu.edu/"
+          }
         ]
-      ],
-      "technology_cards": [
-        [
-          "触覚インターフェイス",
-          "media/tech-tactile.png",
-          "media/about-tech-sponsor-alps-jp.png",
-          "https://www.alpsalpine.com/j/"
-        ],
-        [
-          "画像認識",
-          "media/tech-vision.png",
-          "media/about-tech-sponsor-omron-jp.png",
-          "https://www.omron.co.jp/"
-        ],
-        [
-          "対話AI・行動/環境認識・クラウド技術",
-          "media/about-tech-dialogue.png",
-          "media/about-tech-sponsor-ibm-jp.png",
-          "https://www.ibm.com/jp-ja/about"
-        ],
-        [
-          "ロボット技術・測位/ナビゲーション",
-          "media/tech-navigation.png",
-          "media/about-tech-sponsor-shimizu-jp.png",
-          "https://www.shimz.co.jp/"
-        ],
-        [
-          "モビリティサービス",
-          "media/tech-mobility.png",
-          null,
-          null
-        ],
-        [
-          "視覚障がい者支援技術",
-          "media/tech-accessibility.png",
-          "media/about-tech-sponsor-cmu.png",
-          "https://www.cmu.edu/"
-        ]
-      ]
+      },
+      "contact_cta": {
+        "title": "Any Questions?",
+        "body": "AIスーツケース・コンソーシアムでは、実験に参加していただけるユーザーや活用可能なデータを提供していただける企業からの連絡をお待ちしています。その他ご質問、取材等もお気軽にお問い合わせください。",
+        "label": "Contact Us",
+        "show_image": true
+      }
     },
     "en": {
       "page_title": "About",
-      "team_title": "Our Team",
-      "primary_title": "Primary Members",
-      "associate_title": "Associate Members",
-      "supporting_title": "Supporting Members",
-      "document_title": "Article of Incorporation",
-      "document_label": "Open",
-      "technology_eyebrow": "each member has a role",
-      "technology_title": "Our Technology",
-      "technology_label": "Learn More",
-      "contact_title": "Any Questions?",
-      "contact_body": "We welcome feedback and questions from users, corporate communities and academia. Please feel free to drop in and let us know.",
-      "contact_label": "Contact Us",
-      "show_contact_image": true,
-      "mission_media": "video",
-      "mission_image": "media/about-mission-en.jpg",
-      "mission_image_alt": "Field test scene with AI Suitcase",
-      "primary_members": [
-        [
-          "IBM Japan, Ltd.",
-          "media/about-primary-ibm-en.png",
-          "https://www.ibm.com/jp-ja"
-        ],
-        [
-          "Shimizu Corporation",
-          "media/about-primary-shimizu-en.png",
-          "https://www.shimz.co.jp/"
-        ],
-        [
-          "OMRON Corporation",
-          "media/about-primary-omron-en.png",
-          "https://www.omron.co.jp/"
-        ],
-        [
-          "Alps Alpine Co., Ltd.",
-          "media/about-primary-alps-en.png",
-          "https://www.alpsalpine.com/j/"
+      "mission": {
+        "body": "Consortium for Advanced Assistive Mobility Platform (CAAMP, a.k.a. the AI Suitcase Consortium) is working to improve accessibility and quality of life for blind and visually impaired people through real-world deployment of assistive AI technologies.",
+        "media": {
+          "type": "video",
+          "image": "media/about-mission-en.jpg",
+          "image_alt": "Field test scene with AI Suitcase"
+        }
+      },
+      "team": {
+        "title": "Our Team",
+        "board": {
+          "title": "Board of Directors",
+          "members": [
+            {
+              "name": "Takeshi Fukuda",
+              "role": "Representative Director",
+              "org": "IBM Japan, Ltd.",
+              "image": "media/member-fukuda.jpg"
+            },
+            {
+              "name": "Shuji Kakegawa",
+              "role": "Director",
+              "org": "Shimizu Corporation",
+              "image": "media/member-kakegawa.jpg"
+            },
+            {
+              "name": "Masaki Suwa",
+              "role": "Director",
+              "org": "OMRON Corporation",
+              "image": "media/member-suwa.jpg"
+            },
+            {
+              "name": "Naoki Ito",
+              "role": "Auditor",
+              "org": "Alps Alpine Co., Ltd.",
+              "image": "media/member-ito.jpeg"
+            }
+          ]
+        },
+        "primary": {
+          "title": "Primary Members",
+          "members": [
+            {
+              "name": "IBM Japan, Ltd.",
+              "image": "media/about-primary-ibm-en.png",
+              "href": "https://www.ibm.com/jp-ja"
+            },
+            {
+              "name": "Shimizu Corporation",
+              "image": "media/about-primary-shimizu-en.png",
+              "href": "https://www.shimz.co.jp/"
+            },
+            {
+              "name": "OMRON Corporation",
+              "image": "media/about-primary-omron-en.png",
+              "href": "https://www.omron.co.jp/"
+            },
+            {
+              "name": "Alps Alpine Co., Ltd.",
+              "image": "media/about-primary-alps-en.png",
+              "href": "https://www.alpsalpine.com/j/"
+            }
+          ]
+        },
+        "associate": {
+          "title": "Associate Members"
+        },
+        "distinguished": {
+          "title": "Distinguished Members",
+          "members": [
+            {
+              "name": "Chieko Asakawa",
+              "role": "Distinguished Member",
+              "org": "Carnegie Mellon University / IBM Corporation",
+              "image": "media/member-asakawa-en.jpg",
+              "href": "https://researcher.watson.ibm.com/researcher/view.php?person=us-chiekoa"
+            },
+            {
+              "name": "Daisuke Sato",
+              "role": "Distinguished Member",
+              "org": "Carnegie Mellon University",
+              "image": "media/member-sato-en.jpg",
+              "href": "https://www.ri.cmu.edu/ri-people/daisuke-sato/"
+            }
+          ]
+        },
+        "supporting": {
+          "title": "Supporting Members",
+          "members": [
+            {
+              "name": "Keio University",
+              "href": null
+            },
+            {
+              "name": "Waseda University Morishima Lab.",
+              "href": null
+            },
+            {
+              "name": "Japan Guide Dog Association",
+              "href": "https://www.moudouken.net/"
+            },
+            {
+              "name": "ACE Co., Ltd.",
+              "href": "https://www.ace.jp/"
+            },
+            {
+              "name": "The National Museum of Emerging Science and Innovation",
+              "href": "https://www.miraikan.jst.go.jp/"
+            },
+            {
+              "name": "Santen Pharmaceutical Co., Ltd.",
+              "href": "https://www.santen.co.jp/ja/"
+            },
+            {
+              "name": "Research Institute on Human and Societal Augmentation",
+              "href": "https://unit.aist.go.jp/rihsa/en/"
+            }
+          ]
+        }
+      },
+      "document": {
+        "title": "Article of Incorporation",
+        "label": "Open"
+      },
+      "technology": {
+        "eyebrow": "each member has a role",
+        "title": "Our Technology",
+        "label": "Learn More",
+        "cards": [
+          {
+            "title": "Tactile Interface",
+            "image": "media/tech-tactile.png",
+            "sponsor_image": "media/about-tech-sponsor-alps-en.png",
+            "sponsor_href": "https://www.alpsalpine.com/j/"
+          },
+          {
+            "title": "Visual Recognition",
+            "image": "media/tech-vision.png",
+            "sponsor_image": "media/about-tech-sponsor-omron-en.png",
+            "sponsor_href": "https://www.omron.co.jp/"
+          },
+          {
+            "title": "Interactive AI, Behavior and Environment Recognition, Cloud",
+            "image": "media/about-tech-dialogue.png",
+            "sponsor_image": "media/about-tech-sponsor-ibm-en.png",
+            "sponsor_href": "https://www.ibm.com/jp-ja/about"
+          },
+          {
+            "title": "Robotics, Localization and Navigation",
+            "image": "media/tech-navigation.png",
+            "sponsor_image": "media/about-tech-sponsor-shimizu-en.png",
+            "sponsor_href": "https://www.shimz.co.jp/"
+          },
+          {
+            "title": "Mobility Service",
+            "image": "media/tech-mobility.png",
+            "sponsor_image": null,
+            "sponsor_href": null
+          },
+          {
+            "title": "Assistive Technologies for Visual Impairment",
+            "image": "media/tech-accessibility.png",
+            "sponsor_image": "media/about-tech-sponsor-cmu.png",
+            "sponsor_href": "https://www.cmu.edu/"
+          }
         ]
-      ],
-      "technology_cards": [
-        [
-          "Tactile Interface",
-          "media/tech-tactile.png",
-          "media/about-tech-sponsor-alps-en.png",
-          "https://www.alpsalpine.com/j/"
-        ],
-        [
-          "Visual Recognition",
-          "media/tech-vision.png",
-          "media/about-tech-sponsor-omron-en.png",
-          "https://www.omron.co.jp/"
-        ],
-        [
-          "Interactive AI, Behavior and Environment Recognition, Cloud",
-          "media/about-tech-dialogue.png",
-          "media/about-tech-sponsor-ibm-en.png",
-          "https://www.ibm.com/jp-ja/about"
-        ],
-        [
-          "Robotics, Localization and Navigation",
-          "media/tech-navigation.png",
-          "media/about-tech-sponsor-shimizu-en.png",
-          "https://www.shimz.co.jp/"
-        ],
-        [
-          "Mobility Service",
-          "media/tech-mobility.png",
-          null,
-          null
-        ],
-        [
-          "Assistive Technologies for Visual Impairment",
-          "media/tech-accessibility.png",
-          "media/about-tech-sponsor-cmu.png",
-          "https://www.cmu.edu/"
-        ]
-      ]
+      },
+      "contact_cta": {
+        "title": "Any Questions?",
+        "body": "We welcome feedback and questions from users, corporate communities and academia. Please feel free to drop in and let us know.",
+        "label": "Contact Us",
+        "show_image": true
+      }
     }
   },
   "tech_content": {
