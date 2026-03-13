@@ -40,7 +40,12 @@ if ("IntersectionObserver" in window) {
         }
       }
     },
-    { rootMargin: "0px 0px -12% 0px", threshold: 0.12 }
+    {
+      // Large sections such as the publications archive may only have a small
+      // visible slice on initial load, so reveal them as soon as they enter view.
+      rootMargin: "0px 0px -8% 0px",
+      threshold: 0,
+    }
   );
 
   revealTargets.forEach((target) => observer.observe(target));

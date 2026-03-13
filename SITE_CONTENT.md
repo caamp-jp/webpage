@@ -1,0 +1,1360 @@
+# Site Content Source
+
+このファイルは、移行後に `docs/` を再構成するための Markdown ベースの情報源です。
+
+## Workflow
+
+1. 現在の公開内容をこのファイルに反映する
+2. `scripts/build_site_from_markdown.py` で `SITE_CONTENT.md` から `docs/` を再生成する
+
+## Notes
+
+- 移行期のクロールと初期静的化は `MIGRATION.md` に分離している
+- `site/` は一時データであり、コミットしない
+- `docs/assets/` は移行後にリポジトリで管理する
+- ページ本文、一覧データ、主要な UI 文言は下記の JSON ブロックを正本とする
+
+## Site Data
+
+<!-- SITE_DATA:BEGIN -->
+```json
+{
+  "site_settings": {
+    "brand_alt": {
+      "jp": "AIスーツケース",
+      "en": "AIスーツケース"
+    },
+    "menu_label": {
+      "jp": "Menu",
+      "en": "Menu"
+    },
+    "follow_href": "https://twitter.com/AISuitcaseCAAMP",
+    "follow_label": {
+      "jp": "Follow Us on X",
+      "en": "Follow Us on X"
+    },
+    "home_logos": [
+      {
+        "alt": "Alps Alpine",
+        "asset": "media/logo-alps.png",
+        "href": "https://www.alpsalpine.com/j/"
+      },
+      {
+        "alt": "IBM",
+        "asset": "media/logo-ibm.png",
+        "href": "https://www.ibm.com/jp-ja"
+      },
+      {
+        "alt": "OMRON",
+        "asset": "media/logo-omron.png",
+        "href": "https://www.omron.co.jp/"
+      },
+      {
+        "alt": "Shimizu",
+        "asset": "media/logo-shimizu.png",
+        "href": "https://www.shimz.co.jp/"
+      }
+    ],
+    "about_mission_title": {
+      "jp": "Our Mission",
+      "en": "Our Mission"
+    },
+    "news_titles": {
+      "jp": {
+        "page_title": "News",
+        "press_releases": "Press Releases",
+        "media": "Media"
+      },
+      "en": {
+        "page_title": "News",
+        "press_releases": "Press Releases",
+        "media": "Media"
+      }
+    },
+    "publications_titles": {
+      "jp": {
+        "page_title": "Publications"
+      },
+      "en": {
+        "page_title": "Publications"
+      }
+    },
+    "related_titles": {
+      "jp": {
+        "page_title": "Related Work",
+        "open_source": "Open Source",
+        "resources": "Outside Resources"
+      },
+      "en": {
+        "page_title": "Related Work",
+        "open_source": "Open Source",
+        "resources": "Outside Resources"
+      }
+    },
+    "contact_labels": {
+      "jp": {
+        "address": "Address",
+        "email": "Email"
+      },
+      "en": {
+        "address": "Address",
+        "email": "Email"
+      }
+    }
+  },
+  "nav_labels": {
+    "jp": {
+      "about": "About",
+      "technology": "Technology",
+      "related-work": "Related Work",
+      "news": "News",
+      "publications": "Publications",
+      "contact": "Contact"
+    },
+    "en": {
+      "about": "About",
+      "technology": "Technology",
+      "related-work": "Related Work",
+      "news": "News",
+      "publications": "Publications",
+      "contact": "Contact"
+    }
+  },
+  "page_meta": {
+    "jp": {
+      "": {
+        "title": "AI Suitcase | CAAMP",
+        "description": "AIスーツケース・コンソーシアムの活動、技術、研究成果をまとめた静的サイト。"
+      },
+      "about": {
+        "title": "About | AI Suitcase",
+        "description": "AIスーツケース・コンソーシアムのミッション、理事会、支援メンバー。"
+      },
+      "technology": {
+        "title": "Technology | AI Suitcase",
+        "description": "AIスーツケースを支える要素技術とシステム構成。"
+      },
+      "related-work": {
+        "title": "Related Work | AI Suitcase",
+        "description": "AIスーツケースに関連するオープンソースと外部リソース。"
+      },
+      "news": {
+        "title": "News | AI Suitcase",
+        "description": "コンソーシアムのプレスリリースとメディア掲載。"
+      },
+      "publications": {
+        "title": "Publications | AI Suitcase",
+        "description": "AIスーツケース関連の論文・研究発表一覧。"
+      },
+      "contact": {
+        "title": "Contact | AI Suitcase",
+        "description": "AIスーツケース・コンソーシアムへの問い合わせ先。"
+      }
+    },
+    "en": {
+      "": {
+        "title": "AI Suitcase | CAAMP",
+        "description": "Static site for the AI Suitcase consortium, its technology, and research output."
+      },
+      "about": {
+        "title": "About | AI Suitcase",
+        "description": "Mission, board members, and collaborators behind CAAMP."
+      },
+      "technology": {
+        "title": "Technology | AI Suitcase",
+        "description": "Technology demos, component areas, and embedded videos for AI Suitcase."
+      },
+      "related-work": {
+        "title": "Related Work | AI Suitcase",
+        "description": "Open-source projects and external resources related to AI Suitcase."
+      },
+      "news": {
+        "title": "News | AI Suitcase",
+        "description": "Press releases and media coverage for AI Suitcase."
+      },
+      "publications": {
+        "title": "Publications | AI Suitcase",
+        "description": "Research publications connected to AI Suitcase and related work."
+      },
+      "contact": {
+        "title": "Contact | AI Suitcase",
+        "description": "Contact information for the Consortium for Advanced Assistive Mobility Platform."
+      }
+    }
+  },
+  "home_content": {
+    "jp": {
+      "eyebrow": "Go Beyond Our Dreams",
+      "title": "AI Suitcase",
+      "lede": "視覚障がい者の独立した移動や街歩きを支援する先進的なモビリティ・ソリューション。",
+      "hero_image_alt": "AI Suitcase moving through a public space",
+      "technology_label": "Our Technology",
+      "intro_eyebrow": "Making Impossible Possible",
+      "intro_title": "Consortium for Advanced Assistive Mobility Platform (CAAMP)",
+      "intro_body": "一般社団法人 次世代移動支援技術開発コンソーシアム",
+      "intro_cta": "About Us",
+      "intro_image": "media/home-intro-jp.jpg",
+      "intro_image_alt": "CAAMP members and AI Suitcase field testing",
+      "news_eyebrow": "We Update regularly!",
+      "news_title": "What's New",
+      "news_cta": "More News",
+      "membership_eyebrow": "Meet Our Team",
+      "membership_title": "Our Membership",
+      "membership_body": "研究開発、そして社会実装実現のため専門分野に秀でた企業、大学と共にグローバルにプロジェクトを進めています。",
+      "contact_eyebrow": "Contact",
+      "contact_title": "Any Questions?",
+      "contact_body": "AI スーツケース・コンソーシアムでは、実験に参加していただけるユーザーや活用可能なデータを提供していただける企業からの連絡をお待ちしています。その他ご質問、取材等もお気軽にお問い合わせください。",
+      "contact_cta": "Contact Us",
+      "contact_image": "media/home-contact.jpg",
+      "contact_image_alt": "Demonstration scene with AI Suitcase users"
+    },
+    "en": {
+      "eyebrow": "Go Beyond Our Dreams",
+      "title": "AI Suitcase",
+      "lede": "Epoch-making mobility solution to help visually-impaired users independently walk around and self-navigate.",
+      "hero_image_alt": "AI Suitcase moving through a public space",
+      "technology_label": "Our Technology",
+      "intro_eyebrow": "Making Impossible Possible",
+      "intro_title": "Consortium for Advanced Assistive Mobility Platform (CAAMP)",
+      "intro_body": "一般社団法人 次世代移動支援技術開発コンソーシアム",
+      "intro_cta": "About Us",
+      "intro_image": "media/home-intro-en.jpg",
+      "intro_image_alt": "CAAMP members and AI Suitcase field testing",
+      "news_eyebrow": "We Update regularly!",
+      "news_title": "What's New",
+      "news_cta": "More News",
+      "membership_eyebrow": "Meet Our Team",
+      "membership_title": "Our Membership",
+      "membership_body": "Epoch-making mobility solution to help visually-impaired users independently walk around and self-navigate.",
+      "contact_eyebrow": "Contact",
+      "contact_title": "Any Questions?",
+      "contact_body": "We welcome feedback and questions from users, corporate communities and academia. Please feel free to drop in and let us know.",
+      "contact_cta": "Contact Us",
+      "contact_image": "media/home-contact.jpg",
+      "contact_image_alt": "Demonstration scene with AI Suitcase users"
+    }
+  },
+  "about_content": {
+    "jp": {
+      "mission": "一般社団法人 次世代移動支援技術開発コンソーシアム (通称 : AIスーツケース・コンソーシアム) は、視覚障がい者の実社会におけるアクセシビリティ (\"リアルワールド・アクセシビリティ\") と QOL 向上に資する、AI を活用した先進的移動支援技術の研究開発を行っています。",
+      "board_title": "理事会",
+      "board_members": [
+        {
+          "name": "福田 剛志",
+          "role": "代表理事",
+          "org": "日本アイ・ビー・エム株式会社",
+          "image": "media/member-fukuda.jpg"
+        },
+        {
+          "name": "掛川 秀史",
+          "role": "理事",
+          "org": "清水建設株式会社",
+          "image": "media/member-kakegawa.jpg"
+        },
+        {
+          "name": "諏訪 正樹",
+          "role": "理事",
+          "org": "オムロン株式会社",
+          "image": "media/member-suwa.jpg"
+        },
+        {
+          "name": "伊藤 直樹",
+          "role": "監事",
+          "org": "アルプスアルパイン株式会社",
+          "image": "media/member-ito.jpeg"
+        }
+      ],
+      "distinguished_title": "特別会員",
+      "distinguished_members": [
+        {
+          "name": "浅川 智恵子",
+          "role": "特別会員",
+          "org": "カーネギーメロン大学 / IBM Corporation",
+          "image": "media/member-asakawa.jpg",
+          "href": "https://researcher.watson.ibm.com/researcher/view.php?person=us-chiekoa"
+        },
+        {
+          "name": "佐藤 大介",
+          "role": "特別会員",
+          "org": "カーネギーメロン大学",
+          "image": "media/member-sato.png",
+          "href": "https://www.ri.cmu.edu/ri-people/daisuke-sato/"
+        }
+      ],
+      "supporting": [
+        [
+          "慶應義塾大学",
+          null
+        ],
+        [
+          "早稲田大学 先進理工学研究科 物理学及応用物理学専攻 森島繁生研究室",
+          null
+        ],
+        [
+          "日本盲導犬協会",
+          "https://www.moudouken.net/"
+        ],
+        [
+          "エース株式会社",
+          "https://www.ace.jp/"
+        ],
+        [
+          "日本科学未来館",
+          "https://www.miraikan.jst.go.jp/"
+        ],
+        [
+          "産業技術総合研究所 人間拡張研究センター",
+          "https://unit.aist.go.jp/harc/"
+        ],
+        [
+          "HEROZ株式会社",
+          "https://heroz.co.jp/"
+        ]
+      ]
+    },
+    "en": {
+      "mission": "Consortium for Advanced Assistive Mobility Platform (CAAMP, a.k.a. the AI Suitcase Consortium) is working to improve accessibility and quality of life for blind and visually impaired people through real-world deployment of assistive AI technologies.",
+      "board_title": "Board of Directors",
+      "board_members": [
+        {
+          "name": "Takeshi Fukuda",
+          "role": "Representative Director",
+          "org": "IBM Japan, Ltd.",
+          "image": "media/member-fukuda.jpg"
+        },
+        {
+          "name": "Shuji Kakegawa",
+          "role": "Director",
+          "org": "Shimizu Corporation",
+          "image": "media/member-kakegawa.jpg"
+        },
+        {
+          "name": "Masaki Suwa",
+          "role": "Director",
+          "org": "OMRON Corporation",
+          "image": "media/member-suwa.jpg"
+        },
+        {
+          "name": "Naoki Ito",
+          "role": "Auditor",
+          "org": "Alps Alpine Co., Ltd.",
+          "image": "media/member-ito.jpeg"
+        }
+      ],
+      "distinguished_title": "Distinguished Members",
+      "distinguished_members": [
+        {
+          "name": "Chieko Asakawa",
+          "role": "Distinguished Member",
+          "org": "Carnegie Mellon University / IBM Corporation",
+          "image": "media/member-asakawa-en.jpg",
+          "href": "https://researcher.watson.ibm.com/researcher/view.php?person=us-chiekoa"
+        },
+        {
+          "name": "Daisuke Sato",
+          "role": "Distinguished Member",
+          "org": "Carnegie Mellon University",
+          "image": "media/member-sato-en.jpg",
+          "href": "https://www.ri.cmu.edu/ri-people/daisuke-sato/"
+        }
+      ],
+      "supporting": [
+        [
+          "Keio University",
+          null
+        ],
+        [
+          "Waseda University Morishima Lab.",
+          null
+        ],
+        [
+          "Japan Guide Dog Association",
+          "https://www.moudouken.net/"
+        ],
+        [
+          "ACE Co., Ltd.",
+          "https://www.ace.jp/"
+        ],
+        [
+          "The National Museum of Emerging Science and Innovation",
+          "https://www.miraikan.jst.go.jp/"
+        ],
+        [
+          "Santen Pharmaceutical Co., Ltd.",
+          "https://www.santen.co.jp/ja/"
+        ],
+        [
+          "National Institute of Advanced Industrial Science and Technology, Human Augmentation Research Center",
+          "https://unit.aist.go.jp/harc/en/index.html"
+        ]
+      ]
+    }
+  },
+  "about_page_content": {
+    "jp": {
+      "page_title": "About",
+      "team_title": "Our team",
+      "primary_title": "正会員",
+      "associate_title": "準会員",
+      "supporting_title": "賛助会員",
+      "document_title": "定款",
+      "document_label": "定款を開く",
+      "technology_eyebrow": "each member has a role",
+      "technology_title": "Our technology",
+      "technology_label": "Learn More",
+      "contact_title": "Any Questions?",
+      "contact_body": "AIスーツケース・コンソーシアムでは、実験に参加していただけるユーザーや活用可能なデータを提供していただける企業からの連絡をお待ちしています。その他ご質問、取材等もお気軽にお問い合わせください。",
+      "contact_label": "Contact Us",
+      "show_contact_image": true,
+      "mission_media": "video",
+      "primary_members": [
+        [
+          "アルプスアルパイン株式会社",
+          "media/about-primary-alps-jp.png",
+          "https://www.alpsalpine.com/j/"
+        ],
+        [
+          "日本アイ・ビー・エム株式会社",
+          "media/about-primary-ibm-jp.png",
+          "https://www.ibm.com/jp-ja"
+        ],
+        [
+          "オムロン株式会社",
+          "media/about-primary-omron-jp.png",
+          "https://www.omron.co.jp/"
+        ],
+        [
+          "清水建設株式会社",
+          "media/about-primary-shimizu-jp.png",
+          "https://www.shimz.co.jp/"
+        ]
+      ],
+      "technology_cards": [
+        [
+          "触覚インターフェイス",
+          "media/tech-tactile.png",
+          "media/about-tech-sponsor-alps-jp.png",
+          "https://www.alpsalpine.com/j/"
+        ],
+        [
+          "画像認識",
+          "media/tech-vision.png",
+          "media/about-tech-sponsor-omron-jp.png",
+          "https://www.omron.co.jp/"
+        ],
+        [
+          "対話AI・行動/環境認識・クラウド技術",
+          "media/about-tech-dialogue.png",
+          "media/about-tech-sponsor-ibm-jp.png",
+          "https://www.ibm.com/jp-ja/about"
+        ],
+        [
+          "ロボット技術・測位/ナビゲーション",
+          "media/tech-navigation.png",
+          "media/about-tech-sponsor-shimizu-jp.png",
+          "https://www.shimz.co.jp/"
+        ],
+        [
+          "モビリティサービス",
+          "media/tech-mobility.png",
+          null,
+          null
+        ],
+        [
+          "視覚障がい者支援技術",
+          "media/tech-accessibility.png",
+          "media/about-tech-sponsor-cmu.png",
+          "https://www.cmu.edu/"
+        ]
+      ]
+    },
+    "en": {
+      "page_title": "About",
+      "team_title": "Our Team",
+      "primary_title": "Primary Members",
+      "associate_title": "Associate Members",
+      "supporting_title": "Supporting Members",
+      "document_title": "Article of Incorporation",
+      "document_label": "Open",
+      "technology_eyebrow": "each member has a role",
+      "technology_title": "Our Technology",
+      "technology_label": "Learn More",
+      "contact_title": "Any Questions?",
+      "contact_body": "We welcome feedback and questions from users, corporate communities and academia. Please feel free to drop in and let us know.",
+      "contact_label": "Contact Us",
+      "show_contact_image": false,
+      "mission_media": "image-video",
+      "mission_image": "media/about-mission-en.jpg",
+      "mission_image_alt": "Field test scene with AI Suitcase",
+      "primary_members": [
+        [
+          "IBM Japan, Ltd.",
+          "media/about-primary-ibm-en.png",
+          "https://www.ibm.com/jp-ja"
+        ],
+        [
+          "Shimizu Corporation",
+          "media/about-primary-shimizu-en.png",
+          "https://www.shimz.co.jp/"
+        ],
+        [
+          "OMRON Corporation",
+          "media/about-primary-omron-en.png",
+          "https://www.omron.co.jp/"
+        ],
+        [
+          "Alps Alpine Co., Ltd.",
+          "media/about-primary-alps-en.png",
+          "https://www.alpsalpine.com/j/"
+        ]
+      ],
+      "technology_cards": [
+        [
+          "Tactile Interface",
+          "media/tech-tactile.png",
+          "media/about-tech-sponsor-alps-en.png",
+          "https://www.alpsalpine.com/j/"
+        ],
+        [
+          "Visual Recognition",
+          "media/tech-vision.png",
+          "media/about-tech-sponsor-omron-en.png",
+          "https://www.omron.co.jp/"
+        ],
+        [
+          "Interactive AI, Behavior and Environment Recognition, Cloud",
+          "media/about-tech-dialogue.png",
+          "media/about-tech-sponsor-ibm-en.png",
+          "https://www.ibm.com/jp-ja/about"
+        ],
+        [
+          "Robotics, Localization and Navigation",
+          "media/tech-navigation.png",
+          "media/about-tech-sponsor-shimizu-en.png",
+          "https://www.shimz.co.jp/"
+        ],
+        [
+          "Mobility Service",
+          "media/tech-mobility.png",
+          null,
+          null
+        ],
+        [
+          "Assistive Technologies for Visual Impairment",
+          "media/tech-accessibility.png",
+          "media/about-tech-sponsor-cmu.png",
+          "https://www.cmu.edu/"
+        ]
+      ]
+    }
+  },
+  "tech_content": {
+    "jp": {
+      "page_title": "Technology",
+      "main_video_id": "af9440zWCGo",
+      "main_video_title": "Technology Demo@The National Museum of Emerging Science and Innovation (Miraikan) 2023 Winter",
+      "system_title": "Our System",
+      "system_image": "media/tech-system.png",
+      "system_image_alt": "AIスーツケースのシステム構成図",
+      "system_labels": [
+        "距離センサー",
+        "PC",
+        "電源",
+        "駆動部",
+        "カメラ",
+        "操作スイッチ",
+        "外部通信ユニット",
+        "加速度センサー",
+        "触覚デバイス"
+      ],
+      "technology_title_html": "Our<br>Technology",
+      "technology_cards": [
+        [
+          "触覚インターフェイス",
+          "media/tech-tactile.png",
+          "media/about-tech-sponsor-alps-jp.png",
+          "Alps Alpine",
+          "https://www.alpsalpine.com/j/"
+        ],
+        [
+          "画像認識",
+          "media/tech-vision.png",
+          "media/about-tech-sponsor-omron-jp.png",
+          "OMRON",
+          "https://www.omron.co.jp/"
+        ],
+        [
+          "対話AI・行動/環境認識・クラウド技術",
+          "media/tech-dialogue.png",
+          "media/about-tech-sponsor-ibm-jp.png",
+          "IBM",
+          "https://www.ibm.com/jp-ja/about"
+        ],
+        [
+          "ロボット技術・測位/ナビゲーション",
+          "media/tech-navigation.png",
+          "media/about-tech-sponsor-shimizu-jp.png",
+          "Shimizu",
+          "https://www.shimz.co.jp/"
+        ],
+        [
+          "モビリティサービス",
+          "media/tech-mobility.png",
+          null,
+          null,
+          null
+        ],
+        [
+          "視覚障がい者支援技術",
+          "media/tech-accessibility.png",
+          "media/about-tech-sponsor-cmu.png",
+          "Carnegie Mellon University",
+          "https://www.cmu.edu/"
+        ]
+      ],
+      "other_videos_title": "Other Videos",
+      "other_videos": [
+        [
+          "7sMxygc9zfk",
+          "AI Suitcase related video 1"
+        ],
+        [
+          "KU1x1Vv0Fgg",
+          "AI Suitcase related video 2"
+        ]
+      ],
+      "contact_title": "Any Questions?",
+      "contact_body": "AIスーツケース・コンソーシアムでは実験に参加していただけるユーザーや活用可能なデータを提供していただける企業からの連絡をお待ちしています。その他ご質問、取材等もお気軽にお問い合わせください。",
+      "contact_label": "Contact Us",
+      "contact_image": "media/home-contact.jpg",
+      "contact_image_alt": "Demonstration scene with AI Suitcase users"
+    },
+    "en": {
+      "page_title": "Technology",
+      "main_video_id": "af9440zWCGo",
+      "main_video_title": "Technology Demo@The National Museum of Emerging Science and Innovation (Miraikan) 2023 Winter",
+      "system_title": "Our System",
+      "system_image": null,
+      "system_image_alt": "",
+      "system_labels": [],
+      "technology_title_html": "Our Technology",
+      "technology_cards": [
+        [
+          "Tactile Interface",
+          "media/tech-tactile.png",
+          "media/logo-alps.png",
+          "Alps Alpine",
+          "https://www.alpsalpine.com/j/"
+        ],
+        [
+          "Visual Recognition",
+          "media/tech-vision.png",
+          "media/logo-omron.png",
+          "OMRON",
+          "https://www.omron.co.jp/"
+        ],
+        [
+          "Interactive AI, Behavior and Environment Recognition, Cloud",
+          "media/tech-dialogue.png",
+          "media/logo-ibm.png",
+          "IBM",
+          "https://www.ibm.com/jp-ja/about"
+        ],
+        [
+          "Robotics, Localization and Navigation",
+          "media/tech-navigation.png",
+          "media/logo-shimizu.png",
+          "Shimizu",
+          "https://www.shimz.co.jp/"
+        ],
+        [
+          "Mobility Service",
+          "media/tech-mobility.png",
+          null,
+          null,
+          null
+        ],
+        [
+          "Assistive Technologies for Visual Impairment",
+          "media/tech-accessibility.png",
+          "media/about-tech-sponsor-cmu.png",
+          "Carnegie Mellon University",
+          "https://www.cmu.edu/"
+        ]
+      ],
+      "other_videos_title": "Other Videos",
+      "other_videos": [
+        [
+          "7sMxygc9zfk",
+          "AI Suitcase related video 1"
+        ],
+        [
+          "KU1x1Vv0Fgg",
+          "AI Suitcase related video 2"
+        ]
+      ],
+      "contact_title": "Any Questions?",
+      "contact_body": "We welcome feedback and questions from users, corporate communities and academia. Please feel free to drop in and let us know.",
+      "contact_label": "Contact Us",
+      "contact_image": null,
+      "contact_image_alt": ""
+    }
+  },
+  "related_content": {
+    "jp": {
+      "intro": "AIスーツケースの前身となる、Carnegie Mellon University Cognitive Assistant Labでの研究他、関連する活動を紹介します。",
+      "open_source": [
+        [
+          "Cabot",
+          "AIスーツケースのソフトウェアとハードウェアの設計データ。",
+          "https://github.com/CMU-cabot"
+        ],
+        [
+          "Hulop",
+          "AIスーツケースでも利用しているナビゲーションアプリNavCogのオープンソース。",
+          "https://github.com/hulop/"
+        ]
+      ],
+      "resources": [
+        [
+          "Cognitive Assistance Lab",
+          "研究の源流となる Carnegie Mellon University の研究室。",
+          "https://www.cs.cmu.edu/~NavCog/"
+        ],
+        [
+          "NavCog",
+          "屋内ナビゲーション研究から広がったアプリケーション。",
+          "https://www.facebook.com/navcog/"
+        ],
+        [
+          "インクルーシブ・ナビ",
+          "東京の商業施設で使われた視覚障がい者向けナビゲーションアプリ。",
+          "https://www.shimz.co.jp/company/about/news-release/2019/2019020.html"
+        ],
+        [
+          "BBeep",
+          "周囲歩行者との衝突回避を支援する音響システム。",
+          "https://wotipati.github.io/projects/BBeep/BBeep.html"
+        ]
+      ]
+    },
+    "en": {
+      "intro": "Introducing related works including those of Carnegie Mellon University Cognitive Assistance Lab created prior to AI Suitcase.",
+      "open_source": [
+        [
+          "CaBot",
+          "Technical specs and design data for AI Suitcase software and hardware.",
+          "https://github.com/CMU-cabot"
+        ],
+        [
+          "HULOP",
+          "An open-source navigation stack including NavCog, also used in AI Suitcase.",
+          "https://github.com/hulop/"
+        ]
+      ],
+      "resources": [
+        [
+          "Miraikan Accessibility Lab.",
+          "Accessibility-focused research and public engagement connected to the consortium.",
+          "https://www.miraikan.jst.go.jp/en/research/AccessibilityLab/"
+        ],
+        [
+          "Cognitive Assistance Lab.",
+          "The CMU research lab behind much of the earlier navigation work.",
+          "https://www.cs.cmu.edu/~NavCog/"
+        ],
+        [
+          "NavCog",
+          "The broader indoor navigation effort connected to this work.",
+          "https://www.facebook.com/navcog/"
+        ],
+        [
+          "IncNavi",
+          "A Japanese navigation app previously used in a Tokyo shopping mall.",
+          "https://www.shimz.co.jp/company/about/news-release/2019/2019020.html"
+        ],
+        [
+          "BBeep",
+          "A sonic collision-avoidance system for blind travelers and nearby pedestrians.",
+          "https://wotipati.github.io/projects/BBeep/BBeep.html"
+        ]
+      ]
+    }
+  },
+  "news_page_content": {
+    "jp": {
+      "twitter_title": "SNS",
+      "twitter_body": "最新情報は公式 X アカウントでも案内しています。",
+      "twitter_label": "Follow Us on X"
+    },
+    "en": {
+      "twitter_title": "SNS",
+      "twitter_body": "Latest updates are also posted on the official X account.",
+      "twitter_label": "Follow Us on X"
+    }
+  },
+  "contact_content": {
+    "jp": {
+      "page_title": "Contact",
+      "title": "Consortium for Advanced Assistive Mobility Platform",
+      "address": "19-21 Nihonbashi Hakozaki-cho, C/O IBM Japan, Ltd., Chuo-ku, Tokyo 103-8510 Japan",
+      "email": "pmo.caamp.japan@gmail.com",
+      "notice": "静的サイトではフォームを外し、メールでの問い合わせに一本化しています。",
+      "map_embed": "https://maps.google.com/maps?q=19-21%20Nihonbashi%20Hakozaki-cho%20C%2FO%20IBM%20Japan%2C%20Ltd.&t=m&z=15&output=embed&iwloc=near",
+      "layout": "split",
+      "button_label": "Email Us"
+    },
+    "en": {
+      "page_title": "Contact",
+      "title": "Consortium for Advanced Assistive Mobility Platform",
+      "address": "19-21 Nihonbashi Hakozaki-cho, C/O IBM Japan, Ltd., Chuo-ku, Tokyo 103-8510 Japan",
+      "email": "pmo.caamp.japan@gmail.com",
+      "notice": "The original form has been replaced with a direct email contact so the page stays fully static.",
+      "map_embed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.937293936208!2d139.78263913088836!3d35.678545974390985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889439bb79c1b%3A0x12dc0bcd65c5bec0!2sIBM%20Japan!5e0!3m2!1sen!2sca!4v1677812981221!5m2!1sen!2sca",
+      "layout": "stack",
+      "button_label": "Email Us"
+    }
+  },
+  "footer_content": {
+    "jp": {
+      "logo": "media/logo-footer.png",
+      "copyright": "© 2020 All Rights Reserved.",
+      "top_action": "language",
+      "bottom_action": "follow"
+    },
+    "en": {
+      "logo": "media/logo-footer-en.png",
+      "copyright": "© 2023 All Rights Reserved.",
+      "top_action": "follow",
+      "bottom_action": "language"
+    }
+  },
+  "news_sections": {
+    "jp": {
+      "press_releases": [
+        {
+          "kind": "group",
+          "title": "2023年1月 活動延長",
+          "items": [
+            {
+              "text": "アルプスアルパイン株式会社",
+              "href": "https://www.alpsalpine.com/j/news_release/2023/0125_01.html"
+            },
+            {
+              "text": "オムロン株式会社",
+              "href": "https://www.omron.com/jp/ja/news/2023/01/c0125.html"
+            },
+            {
+              "text": "清水建設株式会社",
+              "href": "https://www.shimz.co.jp/company/about/news-release/2023/2022063.html"
+            },
+            {
+              "text": "日本アイ・ビー・エム株式会社",
+              "href": "https://jp.newsroom.ibm.com/2023-01-25-Consortium-for-Advanced-Assistive-Mobility-Platform-extended-its-activity"
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "title": "2020年11月 実証実験開始",
+          "items": [
+            {
+              "text": "アルプスアルパイン株式会社",
+              "href": "https://www.alpsalpine.com/j/news_release/2020/1105_01.html"
+            },
+            {
+              "text": "オムロン株式会社",
+              "href": "https://www.omron.com/jp/ja/news/2020/11/c1112.html"
+            },
+            {
+              "text": "清水建設株式会社",
+              "href": "https://www.shimz.co.jp/company/about/news-release/2020/2020035.html"
+            },
+            {
+              "text": "日本アイ・ビー・エム株式会社",
+              "href": "https://jp.newsroom.ibm.com/2020-11-12-General-Incorporated-Association-Next-Generation-Mobility-Support-Technology-Development-Consortium"
+            },
+            {
+              "text": "三菱自動車工業株式会社",
+              "href": "https://www.mitsubishi-motors.com/jp/newsrelease/2020/detailkb12.html"
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "title": "2020年2月 設立発表",
+          "items": [
+            {
+              "text": "アルプスアルパイン株式会社",
+              "href": "https://www.alpsalpine.com/j/news_release/2020/0206_01.html"
+            },
+            {
+              "text": "オムロン株式会社",
+              "href": "https://www.omron.com/jp/ja/news/2020/02/c0206.html"
+            },
+            {
+              "text": "清水建設株式会社",
+              "href": "https://www.shimz.co.jp/company/about/news-release/2020/2019043.html"
+            },
+            {
+              "text": "日本アイ・ビー・エム株式会社",
+              "href": "https://jp.newsroom.ibm.com/2020-02-06-general-corporation-next-generation-move-support-technology-development-consortium-establishment-notice"
+            },
+            {
+              "text": "三菱自動車工業株式会社",
+              "href": "https://www.mitsubishi-motors.com/jp/newsrelease/2020/detail5414.html"
+            }
+          ]
+        }
+      ],
+      "media": [
+        {
+          "kind": "group",
+          "title": "2023年",
+          "items": [
+            {
+              "text": "日テレNEWS 視覚障害者のため“道案内”生みの親が語る“白杖との違い”",
+              "href": "https://www.youtube.com/watch?v=HE_ikfqZH1w"
+            },
+            {
+              "text": "日本経済新聞 AIスーツケースが道案内 記者が試してみた",
+              "href": "https://www.youtube.com/watch?v=ltXSpNC9T2c"
+            },
+            {
+              "text": "Business Insider Japan 視覚障がい者の「歩く」をリッチにしたい",
+              "href": "https://www.businessinsider.jp/post-264925"
+            },
+            {
+              "text": "Car Watch お台場で次世代モビリティの一般参加型イベント 小池百合子都知事も「AIスーツケース」などを体感",
+              "href": "https://car.watch.impress.co.jp/docs/news/1473499.html"
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "title": "2022年",
+          "items": [
+            {
+              "text": "朝日地球会議（映像アーカイブ） AIが広げる社会参加～ワクワクの技術で「誰一人取り残さない」",
+              "href": "https://www.asahi.com/eco/awf/movie/101901.html"
+            },
+            {
+              "text": "NHK News Web 視覚障害者の旅を助けるＡＩ内蔵スーツケース型ロボット開発中",
+              "href": "https://www3.nhk.or.jp/sapporo-news/20220801/7000049188.html"
+            },
+            {
+              "text": "HBC News 視覚障害者を安全に誘導するロボット「AIスーツケース」 国内の空港で初の実証実験 新千歳空港",
+              "href": "https://www.youtube.com/watch?v=4eusgVCRpL4&"
+            },
+            {
+              "text": "ロボスタ 日本科学未来館で「AIスーツケース」を体験してきた",
+              "href": "https://robotstart.info/2022/07/19/miraikan-ai-suitcase.html"
+            },
+            {
+              "text": "日本盲導犬協会 【対談】多和田悟訓練士 x 浅川智恵子工学博士 ～AIスーツケースが描く視覚障害者の近未来～",
+              "href": "https://www.youtube.com/watch?v=cIQycqq4YVw"
+            },
+            {
+              "text": "JBICTジャーナル ポッドキャスト AI Suitcase特集「それぞれ得意不得意があるので支え合いながら」",
+              "href": "https://jbict.net/journal/podcast/008"
+            },
+            {
+              "text": "NHKオンデマンド（有料視聴） ザ・ヒューマン「浅川智恵子～自由へのスーツケース～」",
+              "href": "https://www.nhk-ondemand.jp/goods/G2022118641SA000/"
+            },
+            {
+              "text": "ANNnewsCH 報道STATION 全盲の女性館長が語る 技術で障害を超えて誰も取り残さない未来",
+              "href": "https://www.youtube.com/watch?v=jjGDioxuzo4"
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "title": "2021年",
+          "items": [
+            {
+              "text": "デジタル庁 牧島かれん前大臣メッセージ",
+              "href": "https://twitter.com/i/status/1473616809928445952"
+            },
+            {
+              "text": "BS朝日「つながる絵本～for SDGs」 #106 愛がいっぱいのスーツケース",
+              "href": "https://www.youtube.com/watch?v=YYplHeL1un0"
+            },
+            {
+              "text": "Business Insider Japan 「ダイバーシティを受け入れられない国」からの変化。日本の科学の未来に必要なこととは？",
+              "href": "https://www.businessinsider.jp/post-245676"
+            },
+            {
+              "text": "Internet Museum 日本科学未来館、第2代館長に浅川智恵子氏が就任",
+              "href": "https://www.museum.or.jp/preview/news/103917"
+            },
+            {
+              "text": "ACM CHI2021 Opening Keynote by Chieko Asakawa “See What I Mean: Making Waves with the Blind”",
+              "href": "https://www.youtube.com/watch?v=3LqCsIvYmX4"
+            },
+            {
+              "text": "Impress Watch 日本科学未来館、新館長が開発中の「AIスーツケース」をデモ",
+              "href": "https://www.watch.impress.co.jp/docs/news/1346380.html"
+            },
+            {
+              "text": "Mugendai（無限大） 「誰一人取り残さない」社会の実現へ",
+              "href": "https://www.ibm.com/blogs/think/jp-ja/mugendai-12742-interview-chiekoasakawa/"
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "title": "2020年",
+          "items": [
+            {
+              "text": "KBCラジオ 「夕方じゃんじゃん」 目の不自由な方へのサポート＃１－「AIスーツケース」について",
+              "href": "https://kbc.co.jp/r-radio/mson2020/info.php#20201214"
+            },
+            {
+              "text": "MONOist 視覚障害者を支援するAIスーツケースが実証実験開始",
+              "href": "https://monoist.itmedia.co.jp/mn/articles/2011/16/news038.html"
+            },
+            {
+              "text": "ENGINE 盲導犬に代わる!? “AIスーツケース” で考えるテクノロジーとデザインの融合",
+              "href": "https://engineweb.jp/article/detail/3291660"
+            },
+            {
+              "text": "PC Watch 視覚障がい者の町歩きを助ける「AIスーツケース」開発へ",
+              "href": "https://pc.watch.impress.co.jp/docs/news/yajiuma/1233667.html?fbclid=IwAR2sgL_1YfnDB0Yt63WEGnlM0W46G0PMTp-80C24ojdlu3RHKTAdRIC3h_A"
+            },
+            {
+              "text": "ANNnewsCH スーツケースが“道案内” AIが“空気も読む”！？",
+              "href": "https://www.youtube.com/watch?v=-qUMnmClhqg&t=2s"
+            },
+            {
+              "text": "CNN A robot suitcase could replace canes and guide dogs for blind people",
+              "href": "https://edition.cnn.com/travel/article/ai-suitcase-blind-chieko-asakawa-spc-intl/index.html"
+            }
+          ]
+        }
+      ]
+    },
+    "en": {
+      "press_releases": [
+        {
+          "kind": "card",
+          "title": "OMRON Corporation – Extension of consortium operation for another year (Jan 25, 2023)",
+          "href": "https://www.omron.com/global/en/media/2023/01/c0125.html",
+          "label": "More detail"
+        },
+        {
+          "kind": "card",
+          "title": "Shimizu Corporation – Establishment of a new industry consortium to develop AI Suitcase (Feb 6, 2020)",
+          "href": "https://www.shimz.co.jp/en/company/about/news-release/2020/2019043.html",
+          "label": "More detail"
+        }
+      ],
+      "media": [
+        {
+          "kind": "group",
+          "title": "2023",
+          "items": [
+            {
+              "text": "RUPTLY - AI Suitcase developed by blind computer scientist from Tokyo ready for its commercial debut (Feb 6, 2023)",
+              "href": "https://www.ruptly.tv/en/videos/20230206-032-ai-suitcase-developed-by-blind-computer-scientist-from-tokyo-ready-for-its-commercial-debut"
+            },
+            {
+              "text": "The Mainichi - Japan-developed 'AI suitcase' tested as replacement for guide dogs (Jan 30, 2023)",
+              "href": "https://mainichi.jp/english/articles/20230128/p2a/00m/0li/018000c"
+            },
+            {
+              "text": "Oddity Central - Blind Computer Scientist Creates AI-Powered Suitcase For the Visually Impaired (Jan 30, 2023)",
+              "href": "https://www.odditycentral.com/technology/blind-computer-scientist-creates-ai-powered-suitcase-for-the-visually-impaired.html"
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "title": "2022",
+          "items": [
+            {
+              "text": "Tokyo Updates - A Science Museum that Leaves No One Behind: A \"Platform\" for Creating the Future (Nov 25, 2022)",
+              "href": "https://www.tokyoupdates.metro.tokyo.lg.jp/en/post-808/"
+            },
+            {
+              "text": "IROS TV - Navigation Robot for the Visually Impaired with Dr Chieko Asakawa (Oct 24, 2022)",
+              "href": "https://www.youtube.com/watch?app=desktop&v=Xwxdne8gRIM"
+            },
+            {
+              "text": "NHK World - Smart suitcase could guide people with visual impairments (Aug 24, 2022)",
+              "href": "https://www3.nhk.or.jp/nhkworld/en/news/ataglance/2223/"
+            },
+            {
+              "text": "J Stories - A robot-suitcase that might replace guide dogs (Mar 8, 2022)",
+              "href": "https://jstories.media/article/a-robot-suitcase-that-might-replace-guide-dogs"
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "title": "2021",
+          "items": [
+            {
+              "text": "NHK World - Asakawa Chieko: Changing Lives with Science and Technology (Dec 4, 2021)",
+              "href": "https://www3.nhk.or.jp/nhkworld/en/tv/thesigns/20211204/2089020/"
+            },
+            {
+              "text": "Santen Report 2021 - Turning Diversity into Advantage to Build an Inclusive Society (Sep 28, 2021)",
+              "href": "https://www.santen.com/en/assets/pdf/ir/document/ar2021e_print_11.pdf"
+            },
+            {
+              "text": "ACM CHI 2021 Opening Keynote – Chieko Asakawa: “See What I Mean: Making Waves with the Blind” (May 11, 2021)",
+              "href": "https://www.youtube.com/watch?v=3LqCsIvYmX4"
+            },
+            {
+              "text": "World Intellectual Property Organization - A Smart Suitcase Helps People Who Are Blind to Travel Independently (May 8, 2021)",
+              "href": "https://www.facebook.com/wipo/videos/3888953504558893/"
+            }
+          ]
+        },
+        {
+          "kind": "group",
+          "title": "2020",
+          "items": [
+            {
+              "text": "NHK World - Suitcase with sensors for the visually impaired (Nov 5, 2020)",
+              "href": "https://www.facebook.com/nhkworld/videos/685960499000472/"
+            },
+            {
+              "text": "CNN Tech for Good – A robot suitcase could replace canes and guide dogs for blind people (Oct 5, 2020)",
+              "href": "https://edition.cnn.com/travel/article/ai-suitcase-blind-chieko-asakawa-spc-intl/index.html"
+            },
+            {
+              "text": "Beebom - IBM Developing an AI Suitcase Robot to Guide the Visually Impaired (Mar 9, 2020)",
+              "href": "https://beebom.com/ibm-ai-suitcase-robot/"
+            },
+            {
+              "text": "The Asahi Shimbun - Robot suitcase guides visually impaired travelers with AI (Feb 24, 2020)",
+              "href": "https://www.asahi.com/ajw/articles/13124084"
+            },
+            {
+              "text": "Robotics & Automation - Omron developing robotic suitcase with AI to assist visually impaired people (Feb 11, 2020)",
+              "href": "https://roboticsandautomationnews.com/2020/02/11/omron-developing-robotic-suitcase-with-ai-to-assist-visually-impaired-people/29823/"
+            },
+            {
+              "text": "The Mainichi - Japan firms develop suitcase to guide visually impaired, tech may supplant assist. dogs (Feb 7, 2020)",
+              "href": "https://mainichi.jp/english/articles/20200207/p2a/00m/0na/018000c"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "publications": {
+    "jp": [
+      {
+        "year": "2025",
+        "items": [
+          "Hironobu Takagi, Kakuya Naito, Daisuke Sato, Masayuki Murata, Seita Kayukawa, and Chieko Asakawa. 2025. Field Trials of Autonomous Navigation Robot for Visually Impaired People . In Extended Abstracts of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025 Case Study).",
+          "Masaki Kuribayashi, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa. 2025. WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People . In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025).",
+          "Rie Kamikubo, Seita Kayukawa, Yuka Kaniwa, Allan Wang, Hernisa Kacorri, Hironobu Takagi, and Chieko Asakawa. 2025. Beyond Omakase: Designing Shared Control for Navigation Robots with Blind People . In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025).",
+          "Masaki Kuribayashi, Kohei Uehara, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima. 2025. Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People . In IEEE Robotics and Automation Letters (RA-L)."
+        ]
+      },
+      {
+        "year": "2024",
+        "items": [
+          "Wang Allan, Sato Daisuke, Corzo Yasser, Simkin Sonya, Biswas Abhijat, and Steinfeld Aaron, TBD Pedestrian Data Collection: Towards Rich, Portable, and Large-Scale Natural Pedestrian Data , 2024 IEEE International Conference on Robotics and Automation (ICRA)",
+          "Masaya Kubota*, Masaki Kuribayashi*, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (*-equal contribution). 2024. Snap&Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection . In Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024).",
+          "Yuka Kaniwa*, Masaki Kuribayashi*, Seita Kayukawa, Daisuke Sato, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (*-equal contribution). 2024. ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall . In Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024)",
+          "高木啓伸，村田将之，佐藤大介，視覚障害者用ナビゲーション・ロボット「AIスーツケース」の実用化に向けて(特集 AI技術とロボット)，日本ロボット工業会，2024-09"
+        ]
+      },
+      {
+        "year": "2023",
+        "items": [
+          "Seita Kayukawa, Daisuke Sato, Masayuki Murata, Tatsuya Ishihara, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2023. Enhancing Blind Visitor’s Autonomy in a Science Museum Using an Autonomous Navigation Robot . In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
+          "Masaki Kuribayashi, Tatsuya Ishihara, Daisuke Sato, Jayakorn Vongkulbhisal, Karnik Ram, Seita Kayukawa, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2023. PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings . In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI ’23)."
+        ]
+      },
+      {
+        "year": "2022",
+        "items": [
+          "Seita Kayukawa, Daisuke Sato, Masayuki Murata, Tatsuya Ishihara, Akihiro Kosugi, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2022. How Users, Facility Managers, and Bystanders Perceive and Accept a Navigation Robot for Visually Impaired People in Public Buildings . In Proceedings of the 31st IEEE International Conference on Robot & Human Interactive Communication (IEEE RO-MAN ’22).",
+          "Masaki Kuribayashi, Seita Kayukawa, Jayakorn Vongkulbhisal, Daisuke Sato, Chieko Asakawa, Hironobu Takagi, and Shigeo Morishima. 2022. Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections . In Proceedings of the 24th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2022).",
+          "高木啓伸, 村田将之, 佐藤大介, 田中俊也, 籔内智浩, 粥川青汰, 木村駿介, 自律型視覚障がい者ナビゲーションロボットの普及を目指して . 情報処理, Vol.63 No.11, 2022"
+        ]
+      },
+      {
+        "year": "2021",
+        "items": [
+          "Kyungjun Lee, Daisuke Sato, Saki Asakawa, Chieko Asakawa, and Hernisa Kacorri. Accessing Passersby Proxemic Signals through a Head-Worn Camera: Opportunities and Limitations for the Blind. In The 23rd International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’21). Article 8, 1–15, 2021",
+          "Masaki Kuribayashi, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima. LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Lines. Proc. of the 2021 CHI Conference on Human Factors in Computing Systems (May 2021), 13 pages, 2021",
+          "Yutaro Yamanaka, Seita Kayukawa, Hironobu Takagi, Yuichi Nagaoka, Yoshimune Hiratsuka, and Satoshi Kurihara. 2021. One-Shot Wayfinding Method for Blind People via OCR and Arrow Analysis with a 360-degree Smartphone Camera . In Proceedings of the 18th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous 2021)."
+        ]
+      },
+      {
+        "year": "2020",
+        "items": [
+          "Seita Kayukawa, Tatsuya Ishihara, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. Guiding Blind Pedestrians in Public Spaces by Understanding Walking Behavior of Nearby Pedestrians. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 4, 3, Article 85 (September 2020), 22 pages, 2020",
+          "Seita Kayukawa, Tatsuya Ishihara, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. BlindPilot: A Robotic Local Navigation System that Leads Blind People to a Landmark Object. In Extended Abstracts of the 2020 CHI Conference on Human Factors in Computing Systems (CHI EA ’20), ACM, 1–9, 2020",
+          "Seita Kayukawa, Hironobu Takagi, João Guerreiro, Shigeo Morishima, and Chieko Asakawa. Smartphone-Based Assistance for Blind People to Stand in Lines. In Extended Abstracts of the 2020 CHI Conference on Human Factors in Computing Systems (CHI EA ’20), ACM, 1–8, 2020",
+          "Kyungjun Lee, Daisuke Sato, Saki Asakawa, Hernisa Kacorri, and Chieko Asakawa. Pedestrian Detection with Wearable Cameras for the Blind: A Two-way Perspective. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20), ACM, 1–12, 2020",
+          "Dragan Ahmetovic, Daisuke Sato, Uran Oh, Tatsuya Ishihara, Kris Kitani, and Chieko Asakawa. ReCog: Supporting Blind People in Recognizing Personal Objects. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20), ACM, 1–12, 2020",
+          "Joao Guerreiro, Daisuke Sato, Dragan Ahmetovic, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. Virtual navigation for blind people: Transferring route knowledge to the real-World. International Journal of Human-computer Studies / International Journal of Man-machine Studies, 135, 102369, 2020"
+        ]
+      },
+      {
+        "year": "2019",
+        "items": [
+          "Pengju Jin, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. A-EXP4: Online Social Policy Learning for Adaptive Robot-Pedestrian Interaction. In Proceedings of the 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 5086–5093, 2019",
+          "Dragan Ahmetovic, Sergio Mascetti, Cristian Bernareggi, João Guerreiro, Uran Oh, and Chieko Asakawa. Deep Learning Compensation of Rotation Errors During Navigation Assistance for People with Visual Impairments or Blindness. ACM Trans. Access. Comput. 12, 4, Article 19, 19 pages, 2019",
+          "João Guerreiro, Daisuke Sato, Saki Asakawa, Huixu Dong, Kris Kitani, and Chieko Asakawa. CaBot: Designing and Evaluating an Autonomous Navigation Robot for Blind People. In The 21st International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’19), ACM, 68–82, 2019",
+          "João Guerreiro, Dragan Ahmetovic, Daisuke Sato, Kris Kitani, and Chieko Asakawa. Airport Accessibility and Navigation Assistance for People with Visual Impairments. In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI ’19), ACM, Paper 16, 1–14, 2019",
+          "Daisuke Sato, Uran Oh, João Guerreiro, Dragan Ahmetovic, Kakuya Naito, Hironobu Takagi, Kris Kitani, and Chieko Asakawa. NavCog3 in the Wild: Large-scale Blind Indoor Navigation Assistant with Semantic Features. ACM Trans. Access. Comput. 12, 3, Article 14 (September 2019), 30 pages, 2019",
+          "Saki Asakawa, João Guerreiro, Daisuke Sato, Hironobu Takagi, Dragan Ahmetovic, Desi Gonzalez, Kris Kitani, and Chieko Asakawa. An Independent and Interactive Museum Experience for Blind People. In Proceedings of the 16th Web For All 2019 Personalization – Personalizing the Web (W4A ’19), ACM, Article 30, 1–9, 2019",
+          "Dragan Ahmetovic, João Guerreiro, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. Impact of Expertise on Interaction Preferences for Navigation Assistance of Visually Impaired Individuals. In Proceedings of the 16th Web For All 2019 Personalization – Personalizing the Web (W4A ’19), ACM, Article 31, 1–9, 2019",
+          "Seita Kayukawa, Keita Higuchi, João Guerreiro, Shigeo Morishima, Yoichi Sato, Kris Kitani, and Chieko Asakawa. BBeep: A Sonic Collision Avoidance System for Blind Travellers and Nearby Pedestrians. In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI ’19), ACM, Paper 52, 1–12, 2019",
+          "Masayuki Murata, Dragan Ahmetovic, Daisuke Sato, Hironobu Takagi, Kris Kitani, Chieko Asakawa. Smartphone-based localization for blind navigation in building-scale indoor environments. Pervasive and Mobile Computing, Volume 57, 2019, Pages 14–32, 2019"
+        ]
+      },
+      {
+        "year": "2018",
+        "items": [
+          "Eshed Ohn-Bar, Kris Kitani, Chieko Asakawa. Personalized Dynamics Models for Adaptive Assistive Navigation Systems. In Proceedings of the 2018 Conference on Robot Learning, 16–39, 2018",
+          "Eshed Ohn-Bar, João Guerreiro, Kris Kitani, and Chieko Asakawa. Variability in Reactions to Instructional Guidance during Smartphone-Based Assisted Navigation of Blind Users. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 2, 3, Article 131 (September 2018), 25 pages, 2018",
+          "Saki Asakawa, João Guerreiro, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. The Present and Future of Museum Accessibility for People with Visual Impairments. In Proceedings of the 20th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’18), ACM, 382–384, 2018",
+          "Tatsuya Ishihara, Kris Kitani, Chieko Asakawa, and Michitaka Hirose. Deep Radio-Visual Localization. In Proceedings of the 2018 IEEE Winter Conference on Applications of Computer Vision (WACV), 596–605, 2018",
+          "Dragan Ahmetovic, Uran Oh, Sergio Mascetti, and Chieko Asakawa. Turn Right: Analysis of Rotation Errors in Turn-by-Turn Navigation for Individuals with Visual Impairments. In Proceedings of the 20th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’18), ACM, 333–339, 2018",
+          "Hernisa Kacorri, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. Environmental Factors in Indoor Navigation Based on Real-World Trajectories of Blind Users. Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems. ACM, Paper 56, 1–12, 2018",
+          "Masayuki Murata, Dragan Ahmetovic, Daisuke Sato, Hironobu Takagi, Kris Kitani, and Chieko Asakawa. Smartphone-based Indoor Localization for Blind Navigation across Building Complexes. In Proceedings of the 2018 IEEE International Conference on Pervasive Computing and Communications (PerCom), 1–10, 2018",
+          "Tatsuya Ishihara, Kris Kitani, Chieko Asakawa, and Michitaka Hirose. Deep Learning and Geometry-Based Image Localization Enhanced by Bluetooth Signals. Journal of Information Processing 59(10), 2018",
+          "Hernisa Kacorri, Sergio Mascetti, Andrea Gerino, Dragan Ahmetovic, Valeria Alampi, Hironobu Takagi, and Chieko Asakawa. Insights on Assistive Orientation and Mobility of People with Visual Impairment Based on Large-Scale Longitudinal Data. ACM Trans. Access. Comput. 11, 1, Article 5 (April 2018), 28 pages, 2018",
+          "João Guerreiro, Eshed Ohn-Bar, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. How Context and User Behavior Affect Indoor Navigation Assistance for Blind People. In Proceedings of the Internet of Accessible Things (W4A ’18), ACM, Article 2, 1–4, 2018",
+          "Eshed Ohn-Bar, João Guerreiro, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. Modeling Expertise in Assistive Navigation Interfaces for Blind People. In 23rd International Conference on Intelligent User Interfaces (IUI ’18), ACM, 403–407, 2018"
+        ]
+      },
+      {
+        "year": "2017",
+        "items": [
+          "Hernisa Kacorri, Kris Kitani, Jeffrey P. Bigham, and Chieko Asakawa. People with Visual Impairment Training Personal Object Recognizers: Feasibility and Challenges. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI ’17), ACM, 5839–5849, 2017",
+          "浅川 智恵子, 多様性が拓くイノベーション, 学術の動向, 22 巻, 11 号, 24–28, 2017 (Chieko Asakawa. Diversity Ignites Innovation. TRENDS IN THE SCIENCES, Volume 22, Issue 11, 24–28, 2017)",
+          "Tatsuya Ishihara, Jayakorn Vongkulbhisal, Kris Kitani, and Chieko Asakawa. Beacon-guided Structure from Motion for Smartphone-based Navigation. In Proceedings of the 2017 IEEE Winter Conference on Applications of Computer Vision (WACV), Santa Rosa, CA, 769–777, 2017",
+          "Dragan Ahmetovic, Masayuki Murata, Cole Gleason, Erin Brady, Hironobu Takagi, Kris Kitani, and Chieko Asakawa. Achieving Practical and Accurate Indoor Navigation for People with Visual Impairments. In Proceedings of the 14th Web for All Conference on The Future of Accessible Work (W4A ’17), ACM, Article 31, 1–10, 2017",
+          "Tatsuya Ishihara, Kris Kitani, Chieko Asakawa, and Michitaka Hirose. Inference Machines for Supervised Bluetooth Localization. In Proceedings of the 2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), New Orleans, LA, 5950–5954, 2017",
+          "João Guerreiro, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. V irtual Navigation for Blind People: Building Sequential Representations of the Real-World. In Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’17), ACM, 280–289, 2017",
+          "Daisuke Sato, Uran Oh, Kakuya Naito, Hironobu Takagi, Kris Kitani, and Chieko Asakawa. NavCog3: An Evaluation of a Smartphone-Based Blind Indoor Navigation Assistant with Semantic Features in a Large-Scale Environment. In Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’17), ACM, 270–279, 2017"
+        ]
+      },
+      {
+        "year": "2016",
+        "items": [
+          "Dragan Ahmetovic, Cole Gleason, Kris Kitani, Hironobu Takagi, and Chieko Asakawa. NavCog: turn-by-turn smartphone navigation assistant for people with visual impairments or blindness. In Proceedings of the 13th Web for All Conference (W4A ’16), ACM, Article 9, 1–2, 2016",
+          "Hernisa Kacorri, Sergio Mascetti, Andrea Gerino, Dragan Ahmetovic, Hironobu Takagi, and Chieko Asakawa. Supporting Orientation of People with Visual Impairment: Analysis of Large Scale Usage Data. In Proceedings of the 18th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’16), ACM, 151–159, 2016",
+          "Dragan Ahmetovic, Cole Gleason, Chengxiong Ruan, Kris Kitani, Hironobu Takagi, and Chieko Asakawa. NavCog: a navigational cognitive assistant for the blind. In Proceedings of the 18th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI ’16), ACM, 90–99, 2016"
+        ]
+      }
+    ],
+    "en": [
+      {
+        "year": "2025",
+        "items": [
+          "Hironobu Takagi, Kakuya Naito, Daisuke Sato, Masayuki Murata, Seita Kayukawa, and Chieko Asakawa. 2025. Field Trials of Autonomous Navigation Robot for Visually Impaired People . In Extended Abstracts of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025 Case Study).",
+          "Masaki Kuribayashi, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa. 2025. WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People . In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025).",
+          "Rie Kamikubo, Seita Kayukawa, Yuka Kaniwa, Allan Wang, Hernisa Kacorri, Hironobu Takagi, and Chieko Asakawa. 2025. Beyond Omakase: Designing Shared Control for Navigation Robots with Blind People . In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025).",
+          "Masaki Kuribayashi, Kohei Uehara, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima. 2025. Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People . In IEEE Robotics and Automation Letters (RA-L)."
+        ]
+      },
+      {
+        "year": "2024",
+        "items": [
+          "Wang Allan, Sato Daisuke, Corzo Yasser, Simkin Sonya, Biswas Abhijat, and Steinfeld Aaron, TBD Pedestrian Data Collection: Towards Rich, Portable, and Large-Scale Natural Pedestrian Data , 2024 IEEE International Conference on Robotics and Automation (ICRA)",
+          "Masaya Kubota*, Masaki Kuribayashi*, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (*-equal contribution). 2024. Snap&Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection . In Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024).",
+          "Yuka Kaniwa*, Masaki Kuribayashi*, Seita Kayukawa, Daisuke Sato, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (*-equal contribution). 2024. ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall . In Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024)",
+          "高木啓伸，村田将之，佐藤大介，視覚障害者用ナビゲーション・ロボット「AIスーツケース」の実用化に向けて(特集 AI技術とロボット)，日本ロボット工業会，2024-09"
+        ]
+      },
+      {
+        "year": "2023",
+        "items": [
+          "Seita Kayukawa, Daisuke Sato, Masayuki Murata, Tatsuya Ishihara, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2023. Enhancing Blind Visitor’s Autonomy in a Science Museum Using an Autonomous Navigation Robot . In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
+          "Masaki Kuribayashi, Tatsuya Ishihara, Daisuke Sato, Jayakorn Vongkulbhisal, Karnik Ram, Seita Kayukawa, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2023. PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings . In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI ’23)."
+        ]
+      },
+      {
+        "year": "2022",
+        "items": [
+          "Seita Kayukawa, Daisuke Sato, Masayuki Murata, Tatsuya Ishihara, Akihiro Kosugi, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2022. How Users, Facility Managers, and Bystanders Perceive and Accept a Navigation Robot for Visually Impaired People in Public Buildings . In Proceedings of the 31st IEEE International Conference on Robot & Human Interactive Communication (IEEE RO-MAN ’22).",
+          "Masaki Kuribayashi, Seita Kayukawa, Jayakorn Vongkulbhisal, Daisuke Sato, Chieko Asakawa, Hironobu Takagi, and Shigeo Morishima. 2022. Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections . In Proceedings of the 24th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2022).",
+          "高木啓伸, 村田将之, 佐藤大介, 田中俊也, 籔内智浩, 粥川青汰, 木村駿介, 自律型視覚障がい者ナビゲーションロボットの普及を目指して . 情報処理, Vol.63 No.11, 2022"
+        ]
+      },
+      {
+        "year": "2021",
+        "items": [
+          "Kyungjun Lee, Daisuke Sato, Saki Asakawa, Chieko Asakawa, and Hernisa Kacorri. Accessing Passersby Proxemic Signals through a Head-Worn Camera: Opportunities and Limitations for the Blind. In The 23rd International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’21). Article 8, 1–15, 2021",
+          "Masaki Kuribayashi, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima. LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Lines. Proc. of the 2021 CHI Conference on Human Factors in Computing Systems (May 2021), 13 pages, 2021",
+          "Yutaro Yamanaka, Seita Kayukawa, Hironobu Takagi, Yuichi Nagaoka, Yoshimune Hiratsuka, and Satoshi Kurihara. 2021. One-Shot Wayfinding Method for Blind People via OCR and Arrow Analysis with a 360-degree Smartphone Camera . In Proceedings of the 18th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous 2021)."
+        ]
+      },
+      {
+        "year": "2020",
+        "items": [
+          "Seita Kayukawa, Tatsuya Ishihara, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. Guiding Blind Pedestrians in Public Spaces by Understanding Walking Behavior of Nearby Pedestrians. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 4, 3, Article 85 (September 2020), 22 pages, 2020",
+          "Seita Kayukawa, Tatsuya Ishihara, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. BlindPilot: A Robotic Local Navigation System that Leads Blind People to a Landmark Object. In Extended Abstracts of the 2020 CHI Conference on Human Factors in Computing Systems (CHI EA ’20), ACM, 1–9, 2020",
+          "Seita Kayukawa, Hironobu Takagi, João Guerreiro, Shigeo Morishima, and Chieko Asakawa. Smartphone-Based Assistance for Blind People to Stand in Lines. In Extended Abstracts of the 2020 CHI Conference on Human Factors in Computing Systems (CHI EA ’20), ACM, 1–8, 2020",
+          "Kyungjun Lee, Daisuke Sato, Saki Asakawa, Hernisa Kacorri, and Chieko Asakawa. Pedestrian Detection with Wearable Cameras for the Blind: A Two-way Perspective. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20), ACM, 1–12, 2020",
+          "Dragan Ahmetovic, Daisuke Sato, Uran Oh, Tatsuya Ishihara, Kris Kitani, and Chieko Asakawa. ReCog: Supporting Blind People in Recognizing Personal Objects. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20), ACM, 1–12, 2020",
+          "Joao Guerreiro, Daisuke Sato, Dragan Ahmetovic, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. Virtual navigation for blind people: Transferring route knowledge to the real-World. International Journal of Human-computer Studies / International Journal of Man-machine Studies, 135, 102369, 2020"
+        ]
+      },
+      {
+        "year": "2019",
+        "items": [
+          "Pengju Jin, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. A-EXP4: Online Social Policy Learning for Adaptive Robot-Pedestrian Interaction. In Proceedings of the 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 5086–5093, 2019",
+          "Dragan Ahmetovic, Sergio Mascetti, Cristian Bernareggi, João Guerreiro, Uran Oh, and Chieko Asakawa. Deep Learning Compensation of Rotation Errors During Navigation Assistance for People with Visual Impairments or Blindness. ACM Trans. Access. Comput. 12, 4, Article 19, 19 pages, 2019",
+          "João Guerreiro, Daisuke Sato, Saki Asakawa, Huixu Dong, Kris Kitani, and Chieko Asakawa. CaBot: Designing and Evaluating an Autonomous Navigation Robot for Blind People. In The 21st International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’19), ACM, 68–82, 2019",
+          "João Guerreiro, Dragan Ahmetovic, Daisuke Sato, Kris Kitani, and Chieko Asakawa. Airport Accessibility and Navigation Assistance for People with Visual Impairments. In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI ’19), ACM, Paper 16, 1–14, 2019",
+          "Daisuke Sato, Uran Oh, João Guerreiro, Dragan Ahmetovic, Kakuya Naito, Hironobu Takagi, Kris Kitani, and Chieko Asakawa. NavCog3 in the Wild: Large-scale Blind Indoor Navigation Assistant with Semantic Features. ACM Trans. Access. Comput. 12, 3, Article 14 (September 2019), 30 pages, 2019",
+          "Saki Asakawa, João Guerreiro, Daisuke Sato, Hironobu Takagi, Dragan Ahmetovic, Desi Gonzalez, Kris Kitani, and Chieko Asakawa. An Independent and Interactive Museum Experience for Blind People. In Proceedings of the 16th Web For All 2019 Personalization – Personalizing the Web (W4A ’19), ACM, Article 30, 1–9, 2019",
+          "Dragan Ahmetovic, João Guerreiro, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. Impact of Expertise on Interaction Preferences for Navigation Assistance of Visually Impaired Individuals. In Proceedings of the 16th Web For All 2019 Personalization – Personalizing the Web (W4A ’19), ACM, Article 31, 1–9, 2019",
+          "Seita Kayukawa, Keita Higuchi, João Guerreiro, Shigeo Morishima, Yoichi Sato, Kris Kitani, and Chieko Asakawa. BBeep: A Sonic Collision Avoidance System for Blind Travellers and Nearby Pedestrians. In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI ’19), ACM, Paper 52, 1–12, 2019",
+          "Masayuki Murata, Dragan Ahmetovic, Daisuke Sato, Hironobu Takagi, Kris Kitani, Chieko Asakawa. Smartphone-based localization for blind navigation in building-scale indoor environments. Pervasive and Mobile Computing, Volume 57, 2019, Pages 14–32, 2019"
+        ]
+      },
+      {
+        "year": "2018",
+        "items": [
+          "Eshed Ohn-Bar, Kris Kitani, Chieko Asakawa. Personalized Dynamics Models for Adaptive Assistive Navigation Systems. In Proceedings of the 2018 Conference on Robot Learning, 16–39, 2018",
+          "Eshed Ohn-Bar, João Guerreiro, Kris Kitani, and Chieko Asakawa. Variability in Reactions to Instructional Guidance during Smartphone-Based Assisted Navigation of Blind Users. Proc. ACM Interact. Mob. Wearable Ubiquitous Technol. 2, 3, Article 131 (September 2018), 25 pages, 2018",
+          "Saki Asakawa, João Guerreiro, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. The Present and Future of Museum Accessibility for People with Visual Impairments. In Proceedings of the 20th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’18), ACM, 382–384, 2018",
+          "Tatsuya Ishihara, Kris Kitani, Chieko Asakawa, and Michitaka Hirose. Deep Radio-Visual Localization. In Proceedings of the 2018 IEEE Winter Conference on Applications of Computer Vision (WACV), 596–605, 2018",
+          "Dragan Ahmetovic, Uran Oh, Sergio Mascetti, and Chieko Asakawa. Turn Right: Analysis of Rotation Errors in Turn-by-Turn Navigation for Individuals with Visual Impairments. In Proceedings of the 20th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’18), ACM, 333–339, 2018",
+          "Hernisa Kacorri, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. Environmental Factors in Indoor Navigation Based on Real-World Trajectories of Blind Users. Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems. ACM, Paper 56, 1–12, 2018",
+          "Masayuki Murata, Dragan Ahmetovic, Daisuke Sato, Hironobu Takagi, Kris Kitani, and Chieko Asakawa. Smartphone-based Indoor Localization for Blind Navigation across Building Complexes. In Proceedings of the 2018 IEEE International Conference on Pervasive Computing and Communications (PerCom), 1–10, 2018",
+          "Tatsuya Ishihara, Kris Kitani, Chieko Asakawa, and Michitaka Hirose. Deep Learning and Geometry-Based Image Localization Enhanced by Bluetooth Signals. Journal of Information Processing 59(10), 2018",
+          "Hernisa Kacorri, Sergio Mascetti, Andrea Gerino, Dragan Ahmetovic, Valeria Alampi, Hironobu Takagi, and Chieko Asakawa. Insights on Assistive Orientation and Mobility of People with Visual Impairment Based on Large-Scale Longitudinal Data. ACM Trans. Access. Comput. 11, 1, Article 5 (April 2018), 28 pages, 2018",
+          "João Guerreiro, Eshed Ohn-Bar, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. How Context and User Behavior Affect Indoor Navigation Assistance for Blind People. In Proceedings of the Internet of Accessible Things (W4A ’18), ACM, Article 2, 1–4, 2018",
+          "Eshed Ohn-Bar, João Guerreiro, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. Modeling Expertise in Assistive Navigation Interfaces for Blind People. In 23rd International Conference on Intelligent User Interfaces (IUI ’18), ACM, 403–407, 2018"
+        ]
+      },
+      {
+        "year": "2017",
+        "items": [
+          "Hernisa Kacorri, Kris Kitani, Jeffrey P. Bigham, and Chieko Asakawa. People with Visual Impairment Training Personal Object Recognizers: Feasibility and Challenges. In Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems (CHI ’17), ACM, 5839–5849, 2017",
+          "浅川 智恵子, 多様性が拓くイノベーション, 学術の動向, 22 巻, 11 号, 24–28, 2017 (Chieko Asakawa. Diversity Ignites Innovation. TRENDS IN THE SCIENCES, Volume 22, Issue 11, 24–28, 2017)",
+          "Tatsuya Ishihara, Jayakorn Vongkulbhisal, Kris Kitani, and Chieko Asakawa. Beacon-guided Structure from Motion for Smartphone-based Navigation. In Proceedings of the 2017 IEEE Winter Conference on Applications of Computer Vision (WACV), Santa Rosa, CA, 769–777, 2017",
+          "Dragan Ahmetovic, Masayuki Murata, Cole Gleason, Erin Brady, Hironobu Takagi, Kris Kitani, and Chieko Asakawa. Achieving Practical and Accurate Indoor Navigation for People with Visual Impairments. In Proceedings of the 14th Web for All Conference on The Future of Accessible Work (W4A ’17), ACM, Article 31, 1–10, 2017",
+          "Tatsuya Ishihara, Kris Kitani, Chieko Asakawa, and Michitaka Hirose. Inference Machines for Supervised Bluetooth Localization. In Proceedings of the 2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), New Orleans, LA, 5950–5954, 2017",
+          "João Guerreiro, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. V irtual Navigation for Blind People: Building Sequential Representations of the Real-World. In Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’17), ACM, 280–289, 2017",
+          "Daisuke Sato, Uran Oh, Kakuya Naito, Hironobu Takagi, Kris Kitani, and Chieko Asakawa. NavCog3: An Evaluation of a Smartphone-Based Blind Indoor Navigation Assistant with Semantic Features in a Large-Scale Environment. In Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’17), ACM, 270–279, 2017"
+        ]
+      },
+      {
+        "year": "2016",
+        "items": [
+          "Dragan Ahmetovic, Cole Gleason, Kris Kitani, Hironobu Takagi, and Chieko Asakawa. NavCog: turn-by-turn smartphone navigation assistant for people with visual impairments or blindness. In Proceedings of the 13th Web for All Conference (W4A ’16), ACM, Article 9, 1–2, 2016",
+          "Hernisa Kacorri, Sergio Mascetti, Andrea Gerino, Dragan Ahmetovic, Hironobu Takagi, and Chieko Asakawa. Supporting Orientation of People with Visual Impairment: Analysis of Large Scale Usage Data. In Proceedings of the 18th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’16), ACM, 151–159, 2016",
+          "Dragan Ahmetovic, Cole Gleason, Chengxiong Ruan, Kris Kitani, Hironobu Takagi, and Chieko Asakawa. NavCog: a navigational cognitive assistant for the blind. In Proceedings of the 18th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI ’16), ACM, 90–99, 2016"
+        ]
+      }
+    ]
+  }
+}
+```
+<!-- SITE_DATA:END -->

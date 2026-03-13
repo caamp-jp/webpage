@@ -4,6 +4,7 @@ from __future__ import annotations
 import html
 import os
 import shutil
+from copy import deepcopy
 from pathlib import Path
 from textwrap import dedent
 
@@ -19,6 +20,89 @@ DOCS_DIR = ASSETS_DIR / "docs"
 
 
 ROUTES = ["", "about", "technology", "related-work", "news", "publications", "contact"]
+SITE_SETTINGS = {
+    "brand_alt": {
+        "jp": "AIスーツケース",
+        "en": "AIスーツケース",
+    },
+    "menu_label": {
+        "jp": "Menu",
+        "en": "Menu",
+    },
+    "follow_href": "https://twitter.com/AISuitcaseCAAMP",
+    "follow_label": {
+        "jp": "Follow Us on X",
+        "en": "Follow Us on X",
+    },
+    "home_logos": [
+        {
+            "alt": "Alps Alpine",
+            "asset": "media/logo-alps.png",
+            "href": "https://www.alpsalpine.com/j/",
+        },
+        {
+            "alt": "IBM",
+            "asset": "media/logo-ibm.png",
+            "href": "https://www.ibm.com/jp-ja",
+        },
+        {
+            "alt": "OMRON",
+            "asset": "media/logo-omron.png",
+            "href": "https://www.omron.co.jp/",
+        },
+        {
+            "alt": "Shimizu",
+            "asset": "media/logo-shimizu.png",
+            "href": "https://www.shimz.co.jp/",
+        },
+    ],
+    "about_mission_title": {
+        "jp": "Our Mission",
+        "en": "Our Mission",
+    },
+    "news_titles": {
+        "jp": {
+            "page_title": "News",
+            "press_releases": "Press Releases",
+            "media": "Media",
+        },
+        "en": {
+            "page_title": "News",
+            "press_releases": "Press Releases",
+            "media": "Media",
+        },
+    },
+    "publications_titles": {
+        "jp": {
+            "page_title": "Publications",
+        },
+        "en": {
+            "page_title": "Publications",
+        },
+    },
+    "related_titles": {
+        "jp": {
+            "page_title": "Related Work",
+            "open_source": "Open Source",
+            "resources": "Outside Resources",
+        },
+        "en": {
+            "page_title": "Related Work",
+            "open_source": "Open Source",
+            "resources": "Outside Resources",
+        },
+    },
+    "contact_labels": {
+        "jp": {
+            "address": "Address",
+            "email": "Email",
+        },
+        "en": {
+            "address": "Address",
+            "email": "Email",
+        },
+    },
+}
 NAV_LABELS = {
     "jp": {
         "about": "About",
@@ -629,8 +713,7 @@ def render_footer_icon(name: str) -> str:
     )
 
 
-def render_footer_follow_link(label: str) -> str:
-    href = "https://twitter.com/AISuitcaseCAAMP"
+def render_footer_follow_link(href: str, label: str) -> str:
     return (
         f'<a class="footer-follow-link" href="{href}" target="_blank" rel="noreferrer"'
         ' aria-label="Follow AI Suitcase on X">'
@@ -647,14 +730,16 @@ def render_footer_language_link(label: str, href: str) -> str:
 
 def render_footer(locale: str, current_dir: str, home_href: str, lang_switch_href: str, lang_switch_label: str) -> str:
     content = FOOTER_CONTENT[locale]
+    follow_href = SITE_SETTINGS["follow_href"]
+    follow_label = SITE_SETTINGS["follow_label"][locale]
     logo_href = asset_href(current_dir, content["logo"])
     top_action = (
         render_footer_language_link(lang_switch_label, lang_switch_href)
         if content["top_action"] == "language"
-        else render_footer_follow_link("Follow Us on X")
+        else render_footer_follow_link(follow_href, follow_label)
     )
     bottom_action = (
-        render_footer_follow_link("Follow Us on X")
+        render_footer_follow_link(follow_href, follow_label)
         if content["bottom_action"] == "follow"
         else render_footer_language_link(lang_switch_label, lang_switch_href)
     )
@@ -694,17 +779,11 @@ def render_section_divider_title(title_html: str) -> str:
 
 
 def render_logo_strip(current_dir: str) -> str:
-    logos = [
-        ("Alps Alpine", "media/logo-alps.png", "https://www.alpsalpine.com/j/"),
-        ("IBM", "media/logo-ibm.png", "https://www.ibm.com/jp-ja"),
-        ("OMRON", "media/logo-omron.png", "https://www.omron.co.jp/"),
-        ("Shimizu", "media/logo-shimizu.png", "https://www.shimz.co.jp/"),
-    ]
     items = []
-    for alt, asset, href in logos:
+    for logo in SITE_SETTINGS["home_logos"]:
         items.append(
-            f'<a class="logo-chip" href="{html.escape(href)}" target="_blank" rel="noreferrer">'
-            f'<img src="{asset_href(current_dir, asset)}" alt="{html.escape(alt)}" loading="lazy"></a>'
+            f'<a class="logo-chip" href="{html.escape(logo["href"])}" target="_blank" rel="noreferrer">'
+            f'<img src="{asset_href(current_dir, logo["asset"])}" alt="{html.escape(logo["alt"])}" loading="lazy"></a>'
         )
     return '<div class="logo-strip">' + "".join(items) + "</div>"
 
@@ -779,8 +858,9 @@ def parse_news(locale: str) -> dict[str, list[dict[str, object]]]:
 def render_news_sections(data: dict[str, list[dict[str, object]]], current_dir: str) -> str:
     locale = "en" if current_dir.startswith("en") or current_dir == "en" else "jp"
     page = NEWS_PAGE_CONTENT[locale]
-    twitter_href = "https://twitter.com/AISuitcaseCAAMP"
-    parts = [render_page_title_panel("News")]
+    titles = SITE_SETTINGS["news_titles"][locale]
+    twitter_href = SITE_SETTINGS["follow_href"]
+    parts = [render_page_title_panel(titles["page_title"])]
     parts.append(
         '<section class="section reveal">'
         f'{render_section_divider_title(html.escape(page["twitter_title"]))}'
@@ -812,7 +892,7 @@ def render_news_sections(data: dict[str, list[dict[str, object]]], current_dir: 
             )
     parts.append(
         '<section class="section reveal">'
-        f'{render_section_divider_title("Press Releases")}'
+        f'{render_section_divider_title(html.escape(titles["press_releases"]))}'
         f'<div class="{press_grid_class}">'
         f'{"".join(press_items)}'
         "</div></section>"
@@ -831,7 +911,7 @@ def render_news_sections(data: dict[str, list[dict[str, object]]], current_dir: 
         )
     parts.append(
         '<section class="section reveal">'
-        f'{render_section_divider_title("Media")}'
+        f'{render_section_divider_title(html.escape(titles["media"]))}'
         '<div class="news-media-stack">'
         f'{"".join(media_groups)}'
         "</div></section>"
@@ -841,7 +921,7 @@ def render_news_sections(data: dict[str, list[dict[str, object]]], current_dir: 
 
 def render_publications(locale: str, groups: list[dict[str, object]]) -> str:
     parts = [
-        render_page_title_panel("Publications"),
+        render_page_title_panel(SITE_SETTINGS["publications_titles"][locale]["page_title"]),
         '<section class="section reveal"><div class="publication-archive">',
     ]
     for group in groups:
@@ -1024,6 +1104,7 @@ def render_about_tech_cards(locale: str, current_dir: str) -> str:
 def render_about(locale: str, current_dir: str) -> str:
     content = ABOUT_CONTENT[locale]
     page = ABOUT_PAGE_CONTENT[locale]
+    mission_title = SITE_SETTINGS["about_mission_title"][locale]
     article_href = asset_href(current_dir, "docs/article-of-incorporation.pdf")
     technology_href = route_href(current_dir, route_dir(locale, "technology"))
     contact_href = route_href(current_dir, route_dir(locale, "contact"))
@@ -1040,7 +1121,7 @@ def render_about(locale: str, current_dir: str) -> str:
             [
                 '<section class="section about-mission-grid reveal">',
                 '<div class="surface about-mission-copy">',
-                '<h2>Our Mission</h2>',
+                f'<h2>{html.escape(mission_title)}</h2>',
                 f'<p>{html.escape(content["mission"])}</p>',
                 "</div>",
                 '<div class="video-shell surface about-inline-video">',
@@ -1054,7 +1135,7 @@ def render_about(locale: str, current_dir: str) -> str:
             [
                 '<section class="section reveal">',
                 '<div class="surface about-mission-copy about-mission-copy-single">',
-                '<h2>Our Mission</h2>',
+                f'<h2>{html.escape(mission_title)}</h2>',
                 f'<p>{html.escape(content["mission"])}</p>',
                 "</div></section>",
                 '<section class="section about-media-grid reveal">',
@@ -1256,6 +1337,7 @@ def render_technology(locale: str, current_dir: str) -> str:
 
 def render_related_work(locale: str, current_dir: str) -> str:
     content = RELATED_CONTENT[locale]
+    titles = SITE_SETTINGS["related_titles"][locale]
     open_source_cards = "".join(
         "<article class=\"surface resource-card reveal\">"
         f"<h3>{html.escape(title)}</h3><p>{html.escape(body)}</p><p>{external_link(href, 'Open Resource', 'button button-secondary')}</p>"
@@ -1270,7 +1352,7 @@ def render_related_work(locale: str, current_dir: str) -> str:
     )
     return dedent(
         f"""
-        {render_page_title_panel("Related Work")}
+        {render_page_title_panel(titles["page_title"])}
 
         <section class="section reveal">
           <div class="surface related-intro-panel">
@@ -1279,14 +1361,14 @@ def render_related_work(locale: str, current_dir: str) -> str:
         </section>
 
         <section class="section reveal">
-          {render_section_divider_title("Open Source")}
+          {render_section_divider_title(html.escape(titles["open_source"]))}
           <div class="card-grid card-grid-2">
             {open_source_cards}
           </div>
         </section>
 
         <section class="section reveal">
-          {render_section_divider_title("Outside Resources")}
+          {render_section_divider_title(html.escape(titles["resources"]))}
           <div class="card-grid card-grid-2">
             {resource_cards}
           </div>
@@ -1297,15 +1379,16 @@ def render_related_work(locale: str, current_dir: str) -> str:
 
 def render_contact(locale: str, current_dir: str) -> str:
     content = CONTACT_CONTENT[locale]
+    labels = SITE_SETTINGS["contact_labels"][locale]
     email_href = f"mailto:{content['email']}"
     details_html = (
         '<div class="contact-detail-stack">'
         '<div class="contact-detail-item">'
-        '<p class="section-kicker">Address</p>'
+        f'<p class="section-kicker">{html.escape(labels["address"])}</p>'
         f'<p>{html.escape(content["address"])}</p>'
         "</div>"
         '<div class="contact-detail-item">'
-        '<p class="section-kicker">Email</p>'
+        f'<p class="section-kicker">{html.escape(labels["email"])}</p>'
         f'<p>{html.escape(content["email"])}</p>'
         "</div></div>"
     )
@@ -1369,6 +1452,8 @@ def render_page(locale: str, route: str, body_html: str) -> str:
     js_href = asset_href(current_dir, "site.js")
     logo_header = asset_href(current_dir, "media/logo-header-en.png" if locale == "en" else "media/logo-header.png")
     lang_attr = "ja" if locale == "jp" else "en"
+    menu_label = SITE_SETTINGS["menu_label"][locale]
+    brand_alt = SITE_SETTINGS["brand_alt"][locale]
 
     return dedent(
         f"""<!doctype html>
@@ -1388,9 +1473,9 @@ def render_page(locale: str, route: str, body_html: str) -> str:
           <header class="site-header">
             <div class="header-inner">
               <a class="brand" href="{home_href}">
-                <img class="brand-logo" src="{logo_header}" alt="AIスーツケース">
+                <img class="brand-logo" src="{logo_header}" alt="{html.escape(brand_alt)}">
               </a>
-              <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+              <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">{html.escape(menu_label)}</button>
               <nav class="site-nav" id="site-nav">
                 {render_nav(locale, route, current_dir)}
                 <a class="lang-switch" href="{lang_switch_href}">{lang_switch_label}</a>
@@ -1423,27 +1508,47 @@ def write_file(path: Path, content: str) -> None:
     path.write_text(content, encoding="utf-8")
 
 
-def build() -> None:
+CONTENT_GLOBAL_MAP = {
+    "site_settings": "SITE_SETTINGS",
+    "nav_labels": "NAV_LABELS",
+    "page_meta": "PAGE_META",
+    "home_content": "HOME_CONTENT",
+    "about_content": "ABOUT_CONTENT",
+    "about_page_content": "ABOUT_PAGE_CONTENT",
+    "tech_content": "TECH_CONTENT",
+    "related_content": "RELATED_CONTENT",
+    "news_page_content": "NEWS_PAGE_CONTENT",
+    "contact_content": "CONTACT_CONTENT",
+    "footer_content": "FOOTER_CONTENT",
+}
+
+
+def _snapshot_content_globals() -> dict[str, object]:
+    return {name: deepcopy(globals()[target]) for name, target in CONTENT_GLOBAL_MAP.items()}
+
+
+def _apply_content_globals(content_data: dict[str, object]) -> None:
+    for name, target in CONTENT_GLOBAL_MAP.items():
+        globals()[target] = deepcopy(content_data[name])
+
+
+def _render_site(
+    news_by_locale: dict[str, dict[str, list[dict[str, object]]]],
+    publications_by_locale: dict[str, list[dict[str, object]]],
+    copy_assets: bool,
+) -> None:
     OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
     write_file(OUTPUT_ROOT / ".nojekyll", "")
-    copy_curated_assets()
-
-    jp_news = parse_news("jp")
-    en_news = parse_news("en")
-    jp_publications = parse_publications("jp")
-    en_publications = parse_publications("en")
-    merged_jp_publications = merge_publications(jp_publications, en_publications)
+    if copy_assets:
+        copy_curated_assets()
 
     renderers = {
         "": lambda locale, current_dir: render_home(locale, current_dir),
         "about": lambda locale, current_dir: render_about(locale, current_dir),
         "technology": lambda locale, current_dir: render_technology(locale, current_dir),
         "related-work": lambda locale, current_dir: render_related_work(locale, current_dir),
-        "news": lambda locale, current_dir: render_news_sections(jp_news if locale == "jp" else en_news, current_dir),
-        "publications": lambda locale, current_dir: render_publications(
-            locale,
-            merged_jp_publications if locale == "jp" else en_publications
-        ),
+        "news": lambda locale, current_dir: render_news_sections(news_by_locale[locale], current_dir),
+        "publications": lambda locale, current_dir: render_publications(locale, publications_by_locale[locale]),
         "contact": lambda locale, current_dir: render_contact(locale, current_dir),
     }
 
@@ -1453,6 +1558,28 @@ def build() -> None:
             body_html = renderers[route](locale, current_dir)
             output = render_page(locale, route, body_html)
             write_file(page_output_path(locale, route), output)
+
+
+def build_from_content_data(content_data: dict[str, object], copy_assets: bool = False) -> None:
+    previous = _snapshot_content_globals()
+    try:
+        _apply_content_globals(content_data)
+        _render_site(content_data["news_sections"], content_data["publications"], copy_assets)
+    finally:
+        _apply_content_globals(previous)
+
+
+def build() -> None:
+    jp_news = parse_news("jp")
+    en_news = parse_news("en")
+    jp_publications = parse_publications("jp")
+    en_publications = parse_publications("en")
+    merged_jp_publications = merge_publications(jp_publications, en_publications)
+    _render_site(
+        {"jp": jp_news, "en": en_news},
+        {"jp": merged_jp_publications, "en": en_publications},
+        copy_assets=True,
+    )
 
 
 if __name__ == "__main__":

@@ -567,11 +567,19 @@ ul {
   max-width: 60rem;
 }
 
+.about-inline-video {
+  min-height: 100%;
+}
+
 .about-inline-video video {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
+  min-height: 100%;
+  aspect-ratio: auto;
   object-fit: cover;
   background: #000;
+  transform: scale(1.06);
+  transform-origin: center;
 }
 
 .about-rule {
