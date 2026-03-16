@@ -804,6 +804,22 @@ ul {
   text-align: center;
 }
 
+.news-twitter-embed-list {
+  display: grid;
+  gap: 20px;
+  width: min(100%, 560px);
+}
+
+.news-twitter-embed {
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-twitter-embed iframe {
+  max-width: 100%;
+  margin-inline: auto !important;
+}
+
 .news-release-grid,
 .news-media-stack,
 .publication-archive {

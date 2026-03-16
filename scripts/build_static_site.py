@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import html
 import os
+import re
 import shutil
 from copy import deepcopy
 from pathlib import Path
@@ -12,6 +13,7 @@ from textwrap import dedent
 ROOT = Path(__file__).resolve().parents[1]
 RAW_ROOT = ROOT / "site" / "caamp.jp"
 OUTPUT_ROOT = ROOT / "docs"
+X_EMBED_SOURCE = ROOT / "X_EMBED.txt"
 ASSETS_DIR = OUTPUT_ROOT / "assets"
 MEDIA_DIR = ASSETS_DIR / "media"
 DOCS_DIR = ASSETS_DIR / "docs"
@@ -841,6 +843,18 @@ def local_link(href: str, label: str, class_name: str = "") -> str:
     return f'<a{class_attr} href="{html.escape(href)}">{html.escape(label)}</a>'
 
 
+def strip_script_tags(raw_html: str) -> str:
+    return re.sub(r"<script\b[^>]*>.*?</script>", "", raw_html, flags=re.IGNORECASE | re.DOTALL).strip()
+
+
+def load_x_embeds() -> list[str]:
+    if not X_EMBED_SOURCE.exists():
+        return []
+    cleaned_html = strip_script_tags(X_EMBED_SOURCE.read_text(encoding="utf-8"))
+    embeds = re.findall(r"<blockquote\b.*?</blockquote>", cleaned_html, flags=re.IGNORECASE | re.DOTALL)
+    return [embed.strip() for embed in embeds if embed.strip()]
+
+
 def render_link_list(items: list[tuple[str, str | None]], external: bool = False) -> str:
     parts = ["<ul class=\"link-list\">"]
     for label, href in items:
@@ -1036,12 +1050,21 @@ def render_news_sections(data: dict[str, list[dict[str, object]]], current_dir: 
     page = NEWS_PAGE_CONTENT[locale]
     titles = SITE_SETTINGS["news_titles"][locale]
     twitter_href = SITE_SETTINGS["follow_href"]
+    twitter_embeds = load_x_embeds()
+    embeds_html = ""
+    if twitter_embeds:
+        embeds_html = (
+            '<div class="news-twitter-embed-list">'
+            + "".join(f'<div class="news-twitter-embed">{embed_html}</div>' for embed_html in twitter_embeds)
+            + "</div>"
+        )
     parts = [render_page_title_panel(titles["page_title"])]
     parts.append(
         '<section class="section reveal">'
         f'{render_section_divider_title(html.escape(page["twitter_title"]))}'
         '<div class="surface news-twitter-panel">'
         f'<p>{html.escape(page["twitter_body"])}</p>'
+        f"{embeds_html}"
         f'<p>{external_link(twitter_href, page["twitter_label"], "button button-secondary")}</p>'
         "</div></section>"
     )
@@ -1092,6 +1115,8 @@ def render_news_sections(data: dict[str, list[dict[str, object]]], current_dir: 
         f'{"".join(media_groups)}'
         "</div></section>"
     )
+    if twitter_embeds:
+        parts.append('<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>')
     return "\n".join(parts)
 
 
