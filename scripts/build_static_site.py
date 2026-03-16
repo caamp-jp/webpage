@@ -1125,7 +1125,17 @@ def render_publications(locale: str, groups: list[dict[str, object]]) -> str:
         '<section class="section reveal"><div class="publication-archive">',
     ]
     for group in groups:
-        items = "".join(f"<li>{html.escape(item)}</li>" for item in group["items"])  # type: ignore[index]
+        links = group.get("links", [])
+        item_markup = []
+        for index, item in enumerate(group["items"]):  # type: ignore[index]
+            citation = html.escape(item)
+            href = links[index] if index < len(links) else None  # type: ignore[arg-type]
+            if href:
+                citation += (
+                    f' <a href="{html.escape(href)}" target="_blank" rel="noreferrer">[link]</a>'
+                )
+            item_markup.append(f"<li>{citation}</li>")
+        items = "".join(item_markup)
         parts.append(
             f'<article class="surface publication-year publication-year-static" id="year-{html.escape(group["year"])}">'
             f'<h2 class="publication-year-heading">{html.escape(group["year"])}</h2>'

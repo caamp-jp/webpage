@@ -1216,12 +1216,27 @@
   "publications": {
     "jp": [
       {
+        "year": "2026",
+        "items": [
+          "高木啓伸，佐藤大介，浅川智恵子．自律型ナビゲーションロボットAIスーツケースの社会実装に向けて．電子情報通信学会誌 = The journal of the Institute of Electronics, Information and Communication Engineers, 109(2), 86–93, 2026-02."
+        ],
+        "links": [
+          "https://www.journal.ieice.org/summary.php?id=k109_2_86&year=2026&lang=J"
+        ]
+      },
+      {
         "year": "2025",
         "items": [
           "Hironobu Takagi, Kakuya Naito, Daisuke Sato, Masayuki Murata, Seita Kayukawa, and Chieko Asakawa. 2025. Field Trials of Autonomous Navigation Robot for Visually Impaired People . In Extended Abstracts of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025 Case Study).",
           "Masaki Kuribayashi, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa. 2025. WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People . In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025).",
           "Rie Kamikubo, Seita Kayukawa, Yuka Kaniwa, Allan Wang, Hernisa Kacorri, Hironobu Takagi, and Chieko Asakawa. 2025. Beyond Omakase: Designing Shared Control for Navigation Robots with Blind People . In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025).",
           "Masaki Kuribayashi, Kohei Uehara, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima. 2025. Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People . In IEEE Robotics and Automation Letters (RA-L)."
+        ],
+        "links": [
+          "https://doi.org/10.1145/3706599.3706663",
+          "https://doi.org/10.1145/3706598.3713788",
+          "https://doi.org/10.1145/3706598.3714112",
+          "https://doi.org/10.1109/lra.2025.3615028"
         ]
       },
       {
@@ -1231,6 +1246,12 @@
           "Masaya Kubota*, Masaki Kuribayashi*, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (*-equal contribution). 2024. Snap&Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection . In Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024).",
           "Yuka Kaniwa*, Masaki Kuribayashi*, Seita Kayukawa, Daisuke Sato, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (*-equal contribution). 2024. ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall . In Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024)",
           "高木啓伸，村田将之，佐藤大介，視覚障害者用ナビゲーション・ロボット「AIスーツケース」の実用化に向けて(特集 AI技術とロボット)，日本ロボット工業会，2024-09"
+        ],
+        "links": [
+          "https://doi.org/10.1109/icra57147.2024.10610335",
+          "https://doi.org/10.1145/3676522",
+          "https://doi.org/10.1145/3676492",
+          "https://www.miraikan.jst.go.jp/lab/AccessibilityLab/AIsuitcase/robot280.html"
         ]
       },
       {
@@ -1238,6 +1259,10 @@
         "items": [
           "Seita Kayukawa, Daisuke Sato, Masayuki Murata, Tatsuya Ishihara, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2023. Enhancing Blind Visitor’s Autonomy in a Science Museum Using an Autonomous Navigation Robot . In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
           "Masaki Kuribayashi, Tatsuya Ishihara, Daisuke Sato, Jayakorn Vongkulbhisal, Karnik Ram, Seita Kayukawa, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2023. PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings . In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI ’23)."
+        ],
+        "links": [
+          "https://doi.org/10.1145/3544548.3581220",
+          "https://doi.org/10.1145/3544548.3580687"
         ]
       },
       {
@@ -1246,6 +1271,11 @@
           "Seita Kayukawa, Daisuke Sato, Masayuki Murata, Tatsuya Ishihara, Akihiro Kosugi, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2022. How Users, Facility Managers, and Bystanders Perceive and Accept a Navigation Robot for Visually Impaired People in Public Buildings . In Proceedings of the 31st IEEE International Conference on Robot & Human Interactive Communication (IEEE RO-MAN ’22).",
           "Masaki Kuribayashi, Seita Kayukawa, Jayakorn Vongkulbhisal, Daisuke Sato, Chieko Asakawa, Hironobu Takagi, and Shigeo Morishima. 2022. Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections . In Proceedings of the 24th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2022).",
           "高木啓伸, 村田将之, 佐藤大介, 田中俊也, 籔内智浩, 粥川青汰, 木村駿介, 自律型視覚障がい者ナビゲーションロボットの普及を目指して . 情報処理, Vol.63 No.11, 2022"
+        ],
+        "links": [
+          "https://doi.org/10.1109/ro-man53752.2022.9900717",
+          "https://doi.org/10.1145/3546714",
+          "https://www.ipsj.or.jp/dp/contents/publication/52/S1304-S02.html"
         ]
       },
       {
@@ -1254,6 +1284,11 @@
           "Kyungjun Lee, Daisuke Sato, Saki Asakawa, Chieko Asakawa, and Hernisa Kacorri. Accessing Passersby Proxemic Signals through a Head-Worn Camera: Opportunities and Limitations for the Blind. In The 23rd International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’21). Article 8, 1–15, 2021",
           "Masaki Kuribayashi, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima. LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Lines. Proc. of the 2021 CHI Conference on Human Factors in Computing Systems (May 2021), 13 pages, 2021",
           "Yutaro Yamanaka, Seita Kayukawa, Hironobu Takagi, Yuichi Nagaoka, Yoshimune Hiratsuka, and Satoshi Kurihara. 2021. One-Shot Wayfinding Method for Blind People via OCR and Arrow Analysis with a 360-degree Smartphone Camera . In Proceedings of the 18th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous 2021)."
+        ],
+        "links": [
+          "https://doi.org/10.1145/3441852.3471232",
+          "https://doi.org/10.1145/3411764.3445451",
+          "https://doi.org/10.1007/978-3-030-94822-1_9"
         ]
       },
       {
@@ -1265,6 +1300,14 @@
           "Kyungjun Lee, Daisuke Sato, Saki Asakawa, Hernisa Kacorri, and Chieko Asakawa. Pedestrian Detection with Wearable Cameras for the Blind: A Two-way Perspective. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20), ACM, 1–12, 2020",
           "Dragan Ahmetovic, Daisuke Sato, Uran Oh, Tatsuya Ishihara, Kris Kitani, and Chieko Asakawa. ReCog: Supporting Blind People in Recognizing Personal Objects. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20), ACM, 1–12, 2020",
           "Joao Guerreiro, Daisuke Sato, Dragan Ahmetovic, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. Virtual navigation for blind people: Transferring route knowledge to the real-World. International Journal of Human-computer Studies / International Journal of Man-machine Studies, 135, 102369, 2020"
+        ],
+        "links": [
+          "https://doi.org/10.1145/3411825",
+          "https://doi.org/10.1145/3334480.3382925",
+          "https://doi.org/10.1145/3334480.3382954",
+          "https://doi.org/10.1145/3313831.3376398",
+          "https://doi.org/10.1145/3313831.3376143",
+          "https://doi.org/10.1016/j.ijhcs.2019.102369"
         ]
       },
       {
@@ -1279,6 +1322,17 @@
           "Dragan Ahmetovic, João Guerreiro, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. Impact of Expertise on Interaction Preferences for Navigation Assistance of Visually Impaired Individuals. In Proceedings of the 16th Web For All 2019 Personalization – Personalizing the Web (W4A ’19), ACM, Article 31, 1–9, 2019",
           "Seita Kayukawa, Keita Higuchi, João Guerreiro, Shigeo Morishima, Yoichi Sato, Kris Kitani, and Chieko Asakawa. BBeep: A Sonic Collision Avoidance System for Blind Travellers and Nearby Pedestrians. In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI ’19), ACM, Paper 52, 1–12, 2019",
           "Masayuki Murata, Dragan Ahmetovic, Daisuke Sato, Hironobu Takagi, Kris Kitani, Chieko Asakawa. Smartphone-based localization for blind navigation in building-scale indoor environments. Pervasive and Mobile Computing, Volume 57, 2019, Pages 14–32, 2019"
+        ],
+        "links": [
+          "https://doi.org/10.1109/iros40897.2019.8967737",
+          "https://doi.org/10.1145/3349264",
+          "https://doi.org/10.1145/3308561.3353771",
+          "https://doi.org/10.1145/3290605.3300246",
+          "https://doi.org/10.1145/3340319",
+          "https://doi.org/10.1145/3315002.3317557",
+          "https://doi.org/10.1145/3315002.3317561",
+          "https://doi.org/10.1145/3290605.3300282",
+          "https://doi.org/10.1016/j.pmcj.2019.04.003"
         ]
       },
       {
@@ -1295,6 +1349,19 @@
           "Hernisa Kacorri, Sergio Mascetti, Andrea Gerino, Dragan Ahmetovic, Valeria Alampi, Hironobu Takagi, and Chieko Asakawa. Insights on Assistive Orientation and Mobility of People with Visual Impairment Based on Large-Scale Longitudinal Data. ACM Trans. Access. Comput. 11, 1, Article 5 (April 2018), 28 pages, 2018",
           "João Guerreiro, Eshed Ohn-Bar, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. How Context and User Behavior Affect Indoor Navigation Assistance for Blind People. In Proceedings of the Internet of Accessible Things (W4A ’18), ACM, Article 2, 1–4, 2018",
           "Eshed Ohn-Bar, João Guerreiro, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. Modeling Expertise in Assistive Navigation Interfaces for Blind People. In 23rd International Conference on Intelligent User Interfaces (IUI ’18), ACM, 403–407, 2018"
+        ],
+        "links": [
+          "https://proceedings.mlr.press/v87/ohnbar18a.html",
+          "https://doi.org/10.1145/3264941",
+          "https://doi.org/10.1145/3234695.3240997",
+          "https://doi.org/10.1109/WACV.2018.00071",
+          "https://doi.org/10.1145/3234695.3236363",
+          "https://doi.org/10.1145/3173574.3173630",
+          "https://doi.org/10.1109/percom.2018.8444593",
+          "https://doi.org/10.2197/ipsjjip.26.707",
+          "https://doi.org/10.1145/3178853",
+          "https://doi.org/10.1145/3192714.3192829",
+          "https://doi.org/10.1145/3172944.3173008"
         ]
       },
       {
@@ -1307,6 +1374,15 @@
           "Tatsuya Ishihara, Kris Kitani, Chieko Asakawa, and Michitaka Hirose. Inference Machines for Supervised Bluetooth Localization. In Proceedings of the 2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), New Orleans, LA, 5950–5954, 2017",
           "João Guerreiro, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. V irtual Navigation for Blind People: Building Sequential Representations of the Real-World. In Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’17), ACM, 280–289, 2017",
           "Daisuke Sato, Uran Oh, Kakuya Naito, Hironobu Takagi, Kris Kitani, and Chieko Asakawa. NavCog3: An Evaluation of a Smartphone-Based Blind Indoor Navigation Assistant with Semantic Features in a Large-Scale Environment. In Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’17), ACM, 270–279, 2017"
+        ],
+        "links": [
+          "https://doi.org/10.1145/3025453.3025899",
+          "https://doi.org/10.5363/tits.22.11_24",
+          "https://doi.org/10.1109/WACV.2017.91",
+          "https://doi.org/10.1145/3058555.3058560",
+          "https://doi.org/10.1109/ICASSP.2017.7953298",
+          "https://doi.org/10.1145/3132525.3132545",
+          "https://doi.org/10.1145/3132525.3132535"
         ]
       },
       {
@@ -1315,17 +1391,37 @@
           "Dragan Ahmetovic, Cole Gleason, Kris Kitani, Hironobu Takagi, and Chieko Asakawa. NavCog: turn-by-turn smartphone navigation assistant for people with visual impairments or blindness. In Proceedings of the 13th Web for All Conference (W4A ’16), ACM, Article 9, 1–2, 2016",
           "Hernisa Kacorri, Sergio Mascetti, Andrea Gerino, Dragan Ahmetovic, Hironobu Takagi, and Chieko Asakawa. Supporting Orientation of People with Visual Impairment: Analysis of Large Scale Usage Data. In Proceedings of the 18th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’16), ACM, 151–159, 2016",
           "Dragan Ahmetovic, Cole Gleason, Chengxiong Ruan, Kris Kitani, Hironobu Takagi, and Chieko Asakawa. NavCog: a navigational cognitive assistant for the blind. In Proceedings of the 18th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI ’16), ACM, 90–99, 2016"
+        ],
+        "links": [
+          "https://doi.org/10.1145/2899475.2899509",
+          "https://doi.org/10.1145/2982142.2982178",
+          "https://doi.org/10.1145/2935334.2935361"
         ]
       }
     ],
     "en": [
       {
+        "year": "2026",
+        "items": [
+          "高木啓伸，佐藤大介，浅川智恵子．自律型ナビゲーションロボットAIスーツケースの社会実装に向けて．電子情報通信学会誌 = The journal of the Institute of Electronics, Information and Communication Engineers, 109(2), 86–93, 2026-02."
+        ],
+        "links": [
+          "https://www.journal.ieice.org/summary.php?id=k109_2_86&year=2026&lang=J"
+        ]
+      },
+      {
         "year": "2025",
         "items": [
           "Hironobu Takagi, Kakuya Naito, Daisuke Sato, Masayuki Murata, Seita Kayukawa, and Chieko Asakawa. 2025. Field Trials of Autonomous Navigation Robot for Visually Impaired People . In Extended Abstracts of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025 Case Study).",
           "Masaki Kuribayashi, Kohei Uehara, Allan Wang, Shigeo Morishima, and Chieko Asakawa. 2025. WanderGuide: Indoor Map-less Robotic Guide for Exploration by Blind People . In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025).",
           "Rie Kamikubo, Seita Kayukawa, Yuka Kaniwa, Allan Wang, Hernisa Kacorri, Hironobu Takagi, and Chieko Asakawa. 2025. Beyond Omakase: Designing Shared Control for Navigation Robots with Blind People . In Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems (CHI 2025).",
           "Masaki Kuribayashi, Kohei Uehara, Allan Wang, Daisuke Sato, Renato Ribeiro, Simon Chu, and Shigeo Morishima. 2025. Memory-Maze: Scenario Driven Visual Language Navigation Benchmark for Guiding Blind People . In IEEE Robotics and Automation Letters (RA-L)."
+        ],
+        "links": [
+          "https://doi.org/10.1145/3706599.3706663",
+          "https://doi.org/10.1145/3706598.3713788",
+          "https://doi.org/10.1145/3706598.3714112",
+          "https://doi.org/10.1109/lra.2025.3615028"
         ]
       },
       {
@@ -1335,6 +1431,12 @@
           "Masaya Kubota*, Masaki Kuribayashi*, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (*-equal contribution). 2024. Snap&Nav: Smartphone-based Indoor Navigation System For Blind People via Floor Map Analysis and Intersection Detection . In Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024).",
           "Yuka Kaniwa*, Masaki Kuribayashi*, Seita Kayukawa, Daisuke Sato, Hironobu Takagi, Chieko Asakawa, and Shigeo Morishima (*-equal contribution). 2024. ChitChatGuide: Conversational Interaction Using Large Language Models for Assisting People with Visual Impairments to Explore a Shopping Mall . In Proceedings of the 26th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2024)",
           "高木啓伸，村田将之，佐藤大介，視覚障害者用ナビゲーション・ロボット「AIスーツケース」の実用化に向けて(特集 AI技術とロボット)，日本ロボット工業会，2024-09"
+        ],
+        "links": [
+          "https://doi.org/10.1109/icra57147.2024.10610335",
+          "https://doi.org/10.1145/3676522",
+          "https://doi.org/10.1145/3676492",
+          "https://www.miraikan.jst.go.jp/lab/AccessibilityLab/AIsuitcase/robot280.html"
         ]
       },
       {
@@ -1342,6 +1444,10 @@
         "items": [
           "Seita Kayukawa, Daisuke Sato, Masayuki Murata, Tatsuya Ishihara, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2023. Enhancing Blind Visitor’s Autonomy in a Science Museum Using an Autonomous Navigation Robot . In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems",
           "Masaki Kuribayashi, Tatsuya Ishihara, Daisuke Sato, Jayakorn Vongkulbhisal, Karnik Ram, Seita Kayukawa, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2023. PathFinder: Designing a Map-less Navigation System for Blind People in Unfamiliar Buildings . In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems (CHI ’23)."
+        ],
+        "links": [
+          "https://doi.org/10.1145/3544548.3581220",
+          "https://doi.org/10.1145/3544548.3580687"
         ]
       },
       {
@@ -1350,6 +1456,11 @@
           "Seita Kayukawa, Daisuke Sato, Masayuki Murata, Tatsuya Ishihara, Akihiro Kosugi, Hironobu Takagi, Shigeo Morishima, and Chieko Asakawa. 2022. How Users, Facility Managers, and Bystanders Perceive and Accept a Navigation Robot for Visually Impaired People in Public Buildings . In Proceedings of the 31st IEEE International Conference on Robot & Human Interactive Communication (IEEE RO-MAN ’22).",
           "Masaki Kuribayashi, Seita Kayukawa, Jayakorn Vongkulbhisal, Daisuke Sato, Chieko Asakawa, Hironobu Takagi, and Shigeo Morishima. 2022. Corridor-Walker: Mobile Indoor Walking Assistance for Blind People to Avoid Obstacles and Recognize Intersections . In Proceedings of the 24th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI 2022).",
           "高木啓伸, 村田将之, 佐藤大介, 田中俊也, 籔内智浩, 粥川青汰, 木村駿介, 自律型視覚障がい者ナビゲーションロボットの普及を目指して . 情報処理, Vol.63 No.11, 2022"
+        ],
+        "links": [
+          "https://doi.org/10.1109/ro-man53752.2022.9900717",
+          "https://doi.org/10.1145/3546714",
+          "https://www.ipsj.or.jp/dp/contents/publication/52/S1304-S02.html"
         ]
       },
       {
@@ -1358,6 +1469,11 @@
           "Kyungjun Lee, Daisuke Sato, Saki Asakawa, Chieko Asakawa, and Hernisa Kacorri. Accessing Passersby Proxemic Signals through a Head-Worn Camera: Opportunities and Limitations for the Blind. In The 23rd International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’21). Article 8, 1–15, 2021",
           "Masaki Kuribayashi, Seita Kayukawa, Hironobu Takagi, Chieko Asakawa, Shigeo Morishima. LineChaser: A Smartphone-Based Navigation System for Blind People to Stand in Lines. Proc. of the 2021 CHI Conference on Human Factors in Computing Systems (May 2021), 13 pages, 2021",
           "Yutaro Yamanaka, Seita Kayukawa, Hironobu Takagi, Yuichi Nagaoka, Yoshimune Hiratsuka, and Satoshi Kurihara. 2021. One-Shot Wayfinding Method for Blind People via OCR and Arrow Analysis with a 360-degree Smartphone Camera . In Proceedings of the 18th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous 2021)."
+        ],
+        "links": [
+          "https://doi.org/10.1145/3441852.3471232",
+          "https://doi.org/10.1145/3411764.3445451",
+          "https://doi.org/10.1007/978-3-030-94822-1_9"
         ]
       },
       {
@@ -1369,6 +1485,14 @@
           "Kyungjun Lee, Daisuke Sato, Saki Asakawa, Hernisa Kacorri, and Chieko Asakawa. Pedestrian Detection with Wearable Cameras for the Blind: A Two-way Perspective. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20), ACM, 1–12, 2020",
           "Dragan Ahmetovic, Daisuke Sato, Uran Oh, Tatsuya Ishihara, Kris Kitani, and Chieko Asakawa. ReCog: Supporting Blind People in Recognizing Personal Objects. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (CHI ’20), ACM, 1–12, 2020",
           "Joao Guerreiro, Daisuke Sato, Dragan Ahmetovic, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. Virtual navigation for blind people: Transferring route knowledge to the real-World. International Journal of Human-computer Studies / International Journal of Man-machine Studies, 135, 102369, 2020"
+        ],
+        "links": [
+          "https://doi.org/10.1145/3411825",
+          "https://doi.org/10.1145/3334480.3382925",
+          "https://doi.org/10.1145/3334480.3382954",
+          "https://doi.org/10.1145/3313831.3376398",
+          "https://doi.org/10.1145/3313831.3376143",
+          "https://doi.org/10.1016/j.ijhcs.2019.102369"
         ]
       },
       {
@@ -1383,6 +1507,17 @@
           "Dragan Ahmetovic, João Guerreiro, Eshed Ohn-Bar, Kris Kitani, and Chieko Asakawa. Impact of Expertise on Interaction Preferences for Navigation Assistance of Visually Impaired Individuals. In Proceedings of the 16th Web For All 2019 Personalization – Personalizing the Web (W4A ’19), ACM, Article 31, 1–9, 2019",
           "Seita Kayukawa, Keita Higuchi, João Guerreiro, Shigeo Morishima, Yoichi Sato, Kris Kitani, and Chieko Asakawa. BBeep: A Sonic Collision Avoidance System for Blind Travellers and Nearby Pedestrians. In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI ’19), ACM, Paper 52, 1–12, 2019",
           "Masayuki Murata, Dragan Ahmetovic, Daisuke Sato, Hironobu Takagi, Kris Kitani, Chieko Asakawa. Smartphone-based localization for blind navigation in building-scale indoor environments. Pervasive and Mobile Computing, Volume 57, 2019, Pages 14–32, 2019"
+        ],
+        "links": [
+          "https://doi.org/10.1109/iros40897.2019.8967737",
+          "https://doi.org/10.1145/3349264",
+          "https://doi.org/10.1145/3308561.3353771",
+          "https://doi.org/10.1145/3290605.3300246",
+          "https://doi.org/10.1145/3340319",
+          "https://doi.org/10.1145/3315002.3317557",
+          "https://doi.org/10.1145/3315002.3317561",
+          "https://doi.org/10.1145/3290605.3300282",
+          "https://doi.org/10.1016/j.pmcj.2019.04.003"
         ]
       },
       {
@@ -1399,6 +1534,19 @@
           "Hernisa Kacorri, Sergio Mascetti, Andrea Gerino, Dragan Ahmetovic, Valeria Alampi, Hironobu Takagi, and Chieko Asakawa. Insights on Assistive Orientation and Mobility of People with Visual Impairment Based on Large-Scale Longitudinal Data. ACM Trans. Access. Comput. 11, 1, Article 5 (April 2018), 28 pages, 2018",
           "João Guerreiro, Eshed Ohn-Bar, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. How Context and User Behavior Affect Indoor Navigation Assistance for Blind People. In Proceedings of the Internet of Accessible Things (W4A ’18), ACM, Article 2, 1–4, 2018",
           "Eshed Ohn-Bar, João Guerreiro, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. Modeling Expertise in Assistive Navigation Interfaces for Blind People. In 23rd International Conference on Intelligent User Interfaces (IUI ’18), ACM, 403–407, 2018"
+        ],
+        "links": [
+          "https://proceedings.mlr.press/v87/ohn-bar18a.html",
+          "https://doi.org/10.1145/3264941",
+          "https://doi.org/10.1145/3234695.3240997",
+          "https://doi.org/10.1109/WACV.2018.00071",
+          "https://doi.org/10.1145/3234695.3236363",
+          "https://doi.org/10.1145/3173574.3173630",
+          "https://doi.org/10.1109/percom.2018.8444593",
+          "https://doi.org/10.2197/ipsjjip.26.707",
+          "https://doi.org/10.1145/3178853",
+          "https://doi.org/10.1145/3192714.3192829",
+          "https://doi.org/10.1145/3172944.3173008"
         ]
       },
       {
@@ -1411,6 +1559,15 @@
           "Tatsuya Ishihara, Kris Kitani, Chieko Asakawa, and Michitaka Hirose. Inference Machines for Supervised Bluetooth Localization. In Proceedings of the 2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), New Orleans, LA, 5950–5954, 2017",
           "João Guerreiro, Dragan Ahmetovic, Kris Kitani, and Chieko Asakawa. V irtual Navigation for Blind People: Building Sequential Representations of the Real-World. In Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’17), ACM, 280–289, 2017",
           "Daisuke Sato, Uran Oh, Kakuya Naito, Hironobu Takagi, Kris Kitani, and Chieko Asakawa. NavCog3: An Evaluation of a Smartphone-Based Blind Indoor Navigation Assistant with Semantic Features in a Large-Scale Environment. In Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’17), ACM, 270–279, 2017"
+        ],
+        "links": [
+          "https://doi.org/10.1145/3025453.3025899",
+          "https://doi.org/10.5363/tits.22.11_24",
+          "https://doi.org/10.1109/WACV.2017.91",
+          "https://doi.org/10.1145/3058555.3058560",
+          "https://doi.org/10.1109/ICASSP.2017.7953298",
+          "https://doi.org/10.1145/3132525.3132545",
+          "https://doi.org/10.1145/3132525.3132535"
         ]
       },
       {
@@ -1419,6 +1576,11 @@
           "Dragan Ahmetovic, Cole Gleason, Kris Kitani, Hironobu Takagi, and Chieko Asakawa. NavCog: turn-by-turn smartphone navigation assistant for people with visual impairments or blindness. In Proceedings of the 13th Web for All Conference (W4A ’16), ACM, Article 9, 1–2, 2016",
           "Hernisa Kacorri, Sergio Mascetti, Andrea Gerino, Dragan Ahmetovic, Hironobu Takagi, and Chieko Asakawa. Supporting Orientation of People with Visual Impairment: Analysis of Large Scale Usage Data. In Proceedings of the 18th International ACM SIGACCESS Conference on Computers and Accessibility (ASSETS ’16), ACM, 151–159, 2016",
           "Dragan Ahmetovic, Cole Gleason, Chengxiong Ruan, Kris Kitani, Hironobu Takagi, and Chieko Asakawa. NavCog: a navigational cognitive assistant for the blind. In Proceedings of the 18th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI ’16), ACM, 90–99, 2016"
+        ],
+        "links": [
+          "https://doi.org/10.1145/2899475.2899509",
+          "https://doi.org/10.1145/2982142.2982178",
+          "https://doi.org/10.1145/2935334.2935361"
         ]
       }
     ]
