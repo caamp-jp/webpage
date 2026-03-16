@@ -211,8 +211,7 @@ CURATED_ASSETS = {
     "media/logo-omron.png": RAW_ROOT / "wp-content/uploads/2023/03/omron_logo.png",
     "media/logo-shimizu.png": RAW_ROOT / "wp-content/uploads/2023/03/shimizu_logo.png",
     "media/hero-home.jpg": RAW_ROOT / "wp-content/uploads/2023/03/IMG_9023-1-e1602126938507-2048x1982.jpg",
-    "media/home-intro-jp.jpg": RAW_ROOT / "wp-content/uploads/2023/03/IMG_8925BA-L2-scaled.jpg",
-    "media/home-intro-en.jpg": RAW_ROOT / "en/wp-content/uploads/2023/03/top_img_about-scaled.jpg",
+    "media/home-intro.jpg": RAW_ROOT / "wp-content/uploads/2023/03/IMG_8925BA-L2-scaled.jpg",
     "media/home-contact.jpg": RAW_ROOT / "wp-content/uploads/2023/03/IMG_5649-1536x1152.jpg",
     "media/about-mission-en.jpg": RAW_ROOT / "en/wp-content/uploads/2023/03/IMG_5584-1024x768.jpg",
     "media/hero-community.jpg": RAW_ROOT / "wp-content/uploads/2023/03/IMG_5649-1536x1152.jpg",
@@ -264,7 +263,7 @@ HOME_CONTENT = {
         "intro_title": "Consortium for Advanced Assistive Mobility Platform (CAAMP)",
         "intro_body": "一般社団法人 次世代移動支援技術開発コンソーシアム",
         "intro_cta": "About Us",
-        "intro_image": "media/home-intro-jp.jpg",
+        "intro_image": "media/home-intro.jpg",
         "intro_image_alt": "AIスーツケースで日本科学未来館を移動する特別会員・浅川智恵子",
         "news_eyebrow": "We Update regularly!",
         "news_title": "What's New",
@@ -289,7 +288,7 @@ HOME_CONTENT = {
         "intro_title": "Consortium for Advanced Assistive Mobility Platform (CAAMP)",
         "intro_body": "一般社団法人 次世代移動支援技術開発コンソーシアム",
         "intro_cta": "About Us",
-        "intro_image": "media/home-intro-en.jpg",
+        "intro_image": "media/home-intro.jpg",
         "intro_image_alt": "Distinguished Member Chieko Asakawa moving through Miraikan with the AI Suitcase",
         "news_eyebrow": "We Update regularly!",
         "news_title": "What's New",
@@ -1143,6 +1142,7 @@ def render_home(locale: str, current_dir: str) -> str:
     about_href = route_href(current_dir, route_dir(locale, "about"))
     news_href = route_href(current_dir, route_dir(locale, "news"))
     contact_href = route_href(current_dir, route_dir(locale, "contact"))
+    hero_image = content.get("hero_image", "media/hero-home.jpg")
 
     return dedent(
         f"""
@@ -1157,7 +1157,7 @@ def render_home(locale: str, current_dir: str) -> str:
           </div>
           <div class="hero-media">
             <div class="hero-image-frame">
-              <img src="{asset_href(current_dir, 'media/hero-home.jpg')}" alt="{html.escape(content['hero_image_alt'])}" loading="eager">
+              <img src="{asset_href(current_dir, hero_image)}" alt="{html.escape(content['hero_image_alt'])}" loading="eager">
             </div>
           </div>
         </section>
@@ -1307,6 +1307,7 @@ def render_about_tech_cards(cards_data: list[dict[str, str | None]], current_dir
 
 def render_about(locale: str, current_dir: str) -> str:
     page = ABOUT_PAGE_DATA[locale]
+    home_content = HOME_CONTENT[locale]
     mission = page["mission"]
     mission_media = mission["media"]
     team = page["team"]
@@ -1318,7 +1319,7 @@ def render_about(locale: str, current_dir: str) -> str:
     technology_href = route_href(current_dir, route_dir(locale, "technology"))
     contact_href = route_href(current_dir, route_dir(locale, "contact"))
     video_src = asset_href(current_dir, "media/ai-suitcase.mp4")
-    video_poster = asset_href(current_dir, "media/hero-home.jpg")
+    video_poster = asset_href(current_dir, home_content.get("hero_image", "media/hero-home.jpg"))
     contact_section_class = "section split-section about-contact-grid reveal" if contact_cta["show_image"] else "section reveal"
     mission_parts = [
         '<section class="section about-page-title reveal">',

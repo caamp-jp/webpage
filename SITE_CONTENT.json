@@ -183,14 +183,15 @@
       "eyebrow": "Go Beyond Our Dreams",
       "title": "AI Suitcase",
       "lede": "視覚障がい者の独立した移動や街歩きを支援する先進的なモビリティ・ソリューション。",
-      "hero_image_alt": "夕日をバックに日本科学未来館で撮影したAIスーツケース",
+      "hero_image": "media/hero-home.jpg",
+      "hero_image_alt": "大阪・関西万博会場のオブジェ前に並ぶ2台のAIスーツケース",
       "technology_label": "Our Technology",
       "intro_eyebrow": "Making Impossible Possible",
       "intro_title": "Consortium for Advanced Assistive Mobility Platform (CAAMP)",
       "intro_body": "一般社団法人 次世代移動支援技術開発コンソーシアム",
       "intro_cta": "About Us",
-      "intro_image": "media/home-intro-jp.jpg",
-      "intro_image_alt": "AIスーツケースで日本科学未来館を移動する特別会員・浅川智恵子",
+      "intro_image": "media/home-intro.jpg",
+      "intro_image_alt": "大阪・関西万博会場の大屋根リング下をAIスーツケースで歩く浅川智恵子",
       "news_eyebrow": "We Update regularly!",
       "news_title": "What's New",
       "news_cta": "More News",
@@ -208,14 +209,15 @@
       "eyebrow": "Go Beyond Our Dreams",
       "title": "AI Suitcase",
       "lede": "Epoch-making mobility solution to help visually-impaired users independently walk around and self-navigate.",
-      "hero_image_alt": "AI Suitcase photographed at Miraikan against the sunset",
+      "hero_image": "media/hero-home.jpg",
+      "hero_image_alt": "Two AI Suitcases displayed in front of colorful Expo 2025 sculptures",
       "technology_label": "Our Technology",
       "intro_eyebrow": "Making Impossible Possible",
       "intro_title": "Consortium for Advanced Assistive Mobility Platform (CAAMP)",
       "intro_body": "一般社団法人 次世代移動支援技術開発コンソーシアム",
       "intro_cta": "About Us",
-      "intro_image": "media/home-intro-en.jpg",
-      "intro_image_alt": "Distinguished Member Chieko Asakawa moving through Miraikan with the AI Suitcase",
+      "intro_image": "media/home-intro.jpg",
+      "intro_image_alt": "Chieko Asakawa walking with the AI Suitcase beneath the Expo 2025 Grand Ring",
       "news_eyebrow": "We Update regularly!",
       "news_title": "What's New",
       "news_cta": "More News",
@@ -524,12 +526,12 @@
               "href": "https://www.miraikan.jst.go.jp/"
             },
             {
-              "name": "Santen Pharmaceutical Co., Ltd.",
-              "href": "https://www.santen.co.jp/ja/"
+              "name": "Research Institute on Human and Societal Augmentation, National Institute of Advanced Industrial Science and Technology (AIST)",
+              "href": "https://unit.aist.go.jp/rihsa/en/"
             },
             {
-              "name": "Research Institute on Human and Societal Augmentation",
-              "href": "https://unit.aist.go.jp/rihsa/en/"
+              "name": "HEROZ, Inc.",
+              "href": "https://heroz.co.jp/en/"
             }
           ]
         }
@@ -599,8 +601,8 @@
   "tech_content": {
     "jp": {
       "page_title": "Technology",
-      "main_video_id": "af9440zWCGo",
-      "main_video_title": "Technology Demo@The National Museum of Emerging Science and Innovation (Miraikan) 2023 Winter",
+      "main_video_id": "JiEBFH1UZlc",
+      "main_video_title": "AIスーツケース＠大阪・関西万博PV",
       "system_title": "Our System",
       "system_image": "media/tech-system.png",
       "system_image_alt": "AIスーツケースのシステム構成図",
@@ -663,6 +665,10 @@
       "other_videos_title": "Other Videos",
       "other_videos": [
         [
+          "af9440zWCGo",
+          "先進技術デモ＠日本科学未来館 2023冬"
+        ],
+        [
           "7sMxygc9zfk",
           "AI Suitcase related video 1"
         ],
@@ -679,8 +685,8 @@
     },
     "en": {
       "page_title": "Technology",
-      "main_video_id": "af9440zWCGo",
-      "main_video_title": "Technology Demo@The National Museum of Emerging Science and Innovation (Miraikan) 2023 Winter",
+      "main_video_id": "JiEBFH1UZlc",
+      "main_video_title": "AI Suitcase @ Expo 2025 Osaka, Kansai Promotional Video",
       "system_title": "Our System",
       "system_image": "media/tech-system.png",
       "system_image_alt": "System diagram of the AI Suitcase",
@@ -742,6 +748,10 @@
       ],
       "other_videos_title": "Other Videos",
       "other_videos": [
+        [
+          "af9440zWCGo",
+          "Technology Demo @ The National Museum of Emerging Science and Innovation (Miraikan), Winter 2023"
+        ],
         [
           "7sMxygc9zfk",
           "AI Suitcase related video 1"

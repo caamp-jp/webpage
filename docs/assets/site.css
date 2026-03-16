@@ -337,11 +337,20 @@ ul {
   border-radius: var(--radius-xl);
 }
 
+.hero-home .hero-image-frame {
+  min-height: 0;
+}
+
 .hero-image-frame img,
 .split-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero-home .hero-image-frame img {
+  display: block;
+  height: auto;
 }
 
 .floating-note {
