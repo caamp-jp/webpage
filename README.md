@@ -2,6 +2,12 @@
 
 このリポジトリは、`caamp.jp` の静的サイトを `docs/` 配下で管理するためのものです。通常運用では `SITE_CONTENT.json` を正本として更新し、`docs/` は生成物として扱います。
 
+## 更新の依頼について
+
+アクセス権のある方は [Issue (private)](https://github.com/caamp-jp/preview/issues) に更新の依頼を投稿してください。
+
+アクセス権については [@daisukes](https://github.com/daisukes) までご連絡ください。
+
 ## 通常の更新手順
 
 通常は `docs/` を直接編集しません。更新時は次の流れを前提にします。
