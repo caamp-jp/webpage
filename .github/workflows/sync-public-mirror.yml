@@ -1,0 +1,46 @@
+name: Sync Public Mirror
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-public-mirror-main
+  cancel-in-progress: true
+
+jobs:
+  sync-public-repo:
+    if: github.repository == 'caamp-jp/preview'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate generated docs
+        run: scripts/check_generated_docs.sh
+
+      - name: Ensure public sync token is configured
+        env:
+          PUBLIC_REPO_SYNC_TOKEN: ${{ secrets.PUBLIC_REPO_SYNC_TOKEN }}
+        run: |
+          if [ -z "$PUBLIC_REPO_SYNC_TOKEN" ]; then
+            echo "::error::Set PUBLIC_REPO_SYNC_TOKEN in the preview repository secrets."
+            exit 1
+          fi
+
+      - name: Sync tracked tree to public repository
+        env:
+          PUBLIC_REPO_URL: https://x-access-token:${{ secrets.PUBLIC_REPO_SYNC_TOKEN }}@github.com/caamp-jp/caamp-jp.github.io.git
+          PUBLIC_BRANCH: main
+          SYNC_COMMIT_MESSAGE: Sync from preview ${{ github.sha }}
+        run: scripts/sync_public_repo.sh
