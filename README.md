@@ -43,6 +43,8 @@ PR では source だけでなく生成済みの `docs/` も含めてください
   `SITE_CONTENT.json` から `docs/` を再生成するスクリプトです。
 - `scripts/check_generated_docs.sh`
   `docs/` が source と一致しているかを検証するスクリプトです。
+- `scripts/process_issue_with_codex.sh`
+  `gh` で Issue を読み込み、Codex CLI で変更を行い、`codex/issue-<number>` ブランチ作成、PR 作成、Issue コメントまで自動化するスクリプトです。
 - `scripts/sync_public_repo.sh`
   現在の tracked tree を public repo に mirror するスクリプトです。
 - `scripts/serve_static_site.py`
@@ -67,6 +69,14 @@ python3 scripts/build_site_from_json.py
 ```bash
 scripts/check_generated_docs.sh
 ```
+
+### Issue から Codex で更新する
+
+```bash
+scripts/process_issue_with_codex.sh ISSUE_NUMBER
+```
+
+既定では private repo の `caamp-jp/preview` を対象に、Issue を読んでページ変更か判定し、該当する場合は `codex/issue-<number>` ブランチを `main` から切って更新します。Codex CLI は `gpt-5.4` と `medium` を使い、`danger-full-access` で実行します。PR 本文と Issue コメントの先頭には `Codexが生成したコメントです。` を必ず付けます。
 
 ### ローカル配信
 
